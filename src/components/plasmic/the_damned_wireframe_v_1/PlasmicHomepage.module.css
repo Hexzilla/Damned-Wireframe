@@ -576,6 +576,13 @@
   width: 1em;
   height: 1em;
 }
+.text__mGgux {
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 800px;
+  min-width: 0;
+}
 .h1 {
   position: relative;
   width: 100%;
@@ -608,7 +615,7 @@
     padding: 0px;
   }
 }
-.text {
+.text__qaRpz {
   position: relative;
   width: 100%;
   height: auto;

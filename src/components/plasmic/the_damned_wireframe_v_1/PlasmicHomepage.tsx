@@ -69,7 +69,6 @@ export type PlasmicHomepage__OverridesType = {
   spacer?: p.Flex<"div">;
   profile?: p.Flex<"div">;
   h1?: p.Flex<"h1">;
-  text?: p.Flex<"div">;
 };
 
 export interface DefaultHomepageProps {
@@ -378,6 +377,16 @@ function PlasmicHomepage__RenderFunc(props: {
               >
                 {hasVariant(variants, "synced", "synced") ? "Unsync" : "Sync"}
               </Button>
+
+              <div
+                className={classNames(
+                  projectcss.all,
+                  projectcss.__wab_text,
+                  sty.text__mGgux
+                )}
+              >
+                {"Edit Profile"}
+              </div>
             </div>
           ) : null}
         </div>
@@ -396,12 +405,10 @@ function PlasmicHomepage__RenderFunc(props: {
         </h1>
 
         <div
-          data-plasmic-name={"text"}
-          data-plasmic-override={overrides.text}
           className={classNames(
             projectcss.all,
             projectcss.__wab_text,
-            sty.text
+            sty.text__qaRpz
           )}
         >
           {""}
@@ -471,13 +478,12 @@ function PlasmicHomepage__RenderFunc(props: {
 }
 
 const PlasmicDescendants = {
-  root: ["root", "header", "menu", "spacer", "profile", "h1", "text"],
+  root: ["root", "header", "menu", "spacer", "profile", "h1"],
   header: ["header", "menu", "spacer", "profile"],
   menu: ["menu"],
   spacer: ["spacer"],
   profile: ["profile"],
-  h1: ["h1"],
-  text: ["text"]
+  h1: ["h1"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
@@ -489,7 +495,6 @@ type NodeDefaultElementType = {
   spacer: "div";
   profile: "div";
   h1: "h1";
-  text: "div";
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -554,7 +559,6 @@ export const PlasmicHomepage = Object.assign(
     spacer: makeNodeComponent("spacer"),
     profile: makeNodeComponent("profile"),
     h1: makeNodeComponent("h1"),
-    text: makeNodeComponent("text"),
 
     // Metadata about props expected for PlasmicHomepage
     internalVariantProps: PlasmicHomepage__VariantProps,
