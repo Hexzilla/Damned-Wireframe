@@ -381,7 +381,13 @@ function PlasmicNftButton__RenderFunc(props: {
           data-plasmic-name={"overlay"}
           data-plasmic-override={overrides.overlay}
           hasGap={true}
-          className={classNames(projectcss.all, sty.overlay)}
+          className={classNames(projectcss.all, sty.overlay, {
+            [sty.overlayshowStartIcon]: hasVariant(
+              variants,
+              "showStartIcon",
+              "showStartIcon"
+            )
+          })}
         >
           {(triggers.hover_root ? true : true) ? (
             <Button className={classNames("__wab_instance", sty.button__otwm5)}>

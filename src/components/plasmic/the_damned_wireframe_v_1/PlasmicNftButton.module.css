@@ -344,25 +344,30 @@
   flex-direction: row;
   display: flex;
   position: absolute;
-  width: 1px;
-  height: 1px;
-  max-width: 0%;
-  overflow: visible;
+  width: 25px;
+  height: 25px;
+  max-width: 25px;
+  overflow: hidden;
   backdrop-filter: none;
   background: none;
-  left: -44px;
-  top: -10px;
+  left: 97px;
+  top: 9px;
   transition-property: all;
   transition-duration: 1s;
-  transition-timing-function: ease-in-out;
+  transition-timing-function: linear;
+  min-width: 25px;
+  min-height: 25px;
+  max-height: 25px;
   flex-shrink: 0;
   -webkit-backdrop-filter: none;
   padding: 8px;
 }
 .overlay > :global(.__wab_flex-container) {
   flex-direction: row;
-  margin-left: calc(0px - 0px);
-  width: calc(100% + 0px);
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: calc(0px - 31px);
+  width: calc(100% + 31px);
 }
 .overlay > :global(.__wab_flex-container) > *,
 .overlay > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
@@ -372,15 +377,19 @@
   > :global(.__wab_slot)
   > picture
   > img {
-  margin-left: 0px;
+  margin-left: 31px;
+}
+.overlayshowStartIcon {
+  left: 85px;
+  top: -26px;
 }
 .root:hover .overlay {
   position: absolute;
-  left: 81px;
-  top: -21px;
-  width: 458px;
+  left: 85px;
+  top: -26px;
+  width: 450px;
   padding-right: 0px;
-  min-width: 478px;
+  min-width: 450px;
   min-height: 133px;
   backdrop-filter: none;
   background: none;
@@ -388,14 +397,17 @@
   margin-right: 0px;
   display: flex;
   flex-direction: row;
-  padding-left: 9px;
+  padding-left: 49px;
+  max-width: 500px;
+  max-height: 500px;
+  height: 150px;
   flex-shrink: 0;
   -webkit-backdrop-filter: none;
 }
 .root:hover .overlay > :global(.__wab_flex-container) {
   flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   margin-left: calc(0px - 31px);
   width: calc(100% + 31px);
   margin-top: calc(0px - 0px);
