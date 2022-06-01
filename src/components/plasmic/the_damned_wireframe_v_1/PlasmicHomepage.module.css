@@ -65,7 +65,7 @@
   flex-direction: column;
   display: flex;
   position: absolute;
-  width: 216px;
+  width: 104px;
   height: auto;
   max-width: 0%;
   left: 8px;
@@ -74,8 +74,8 @@
   min-height: 418px;
   flex-grow: 1;
   flex-shrink: 1;
-  min-width: 143px;
-  overflow: hidden;
+  min-width: 139px;
+  overflow: visible;
   z-index: 1;
   transition-property: all;
   transition-duration: 3s;
@@ -221,230 +221,363 @@
   width: 1em;
   height: 1em;
 }
-.button__bwoC8:global(.__wab_instance) {
+.freeBox__nX7Hs {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: flex-start;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  top: auto;
+  left: auto;
+  transition-property: all;
+  transition-duration: 1s;
+  min-width: 0;
+  padding: 0px;
+}
+.nftButton__pTopd:global(.__wab_instance) {
   max-width: 100%;
   position: relative;
   width: 100%;
-  left: auto;
-  top: auto;
   min-width: 0;
 }
-@media (min-width: 0px) and (max-width: 768px) {
-  .button__bwoC8:global(.__wab_instance) {
-    display: none;
-  }
-}
-.svg__lpsrk {
+.svg__iy4Mx {
   position: relative;
   object-fit: cover;
   width: 1em;
   height: 1em;
 }
-.svg__hhyLj {
+.svg__cmhHl {
   position: relative;
   object-fit: cover;
   width: 1em;
   height: 1em;
 }
-.button__qYsb:global(.__wab_instance) {
-  max-width: 100%;
+.qty {
   position: relative;
+  width: 20px;
+  height: auto;
+  max-width: 800px;
+  align-self: center;
+  text-align: right;
+  flex-shrink: 0;
+}
+.nftButton2 {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: flex-start;
   width: 100%;
-  left: auto;
-  top: auto;
-  min-width: 0;
-}
-@media (min-width: 0px) and (max-width: 768px) {
-  .button__qYsb:global(.__wab_instance) {
-    display: none;
-  }
-}
-.svg__xMwF {
-  position: relative;
-  object-fit: cover;
-  width: 1em;
-  height: 1em;
-}
-.svg___9Sw1A {
-  position: relative;
-  object-fit: cover;
-  width: 1em;
-  height: 1em;
-}
-.button__mEwqt:global(.__wab_instance) {
+  height: auto;
   max-width: 100%;
-  position: relative;
-  width: 100%;
-  left: auto;
   top: auto;
+  left: auto;
   min-width: 0;
+  padding: 0px;
 }
-@media (min-width: 0px) and (max-width: 768px) {
-  .button__mEwqt:global(.__wab_instance) {
-    display: none;
-  }
-}
-.svg__kyTfr {
-  position: relative;
-  object-fit: cover;
-  width: 1em;
-  height: 1em;
-}
-.svg__qDkqO {
-  position: relative;
-  object-fit: cover;
-  width: 1em;
-  height: 1em;
-}
-.button___7R3GY:global(.__wab_instance) {
+.button__tBnJt:global(.__wab_instance) {
   max-width: 100%;
-  position: relative;
   width: 100%;
-  left: auto;
-  top: auto;
   min-width: 0;
 }
 @media (min-width: 0px) and (max-width: 768px) {
-  .button___7R3GY:global(.__wab_instance) {
+  .button__tBnJt:global(.__wab_instance) {
     display: none;
   }
 }
-.svg__ed1Ev {
+.svg__iYVcC {
   position: relative;
   object-fit: cover;
   width: 1em;
   height: 1em;
 }
-.svg__aIZ5 {
+.svg__s3Sa5 {
   position: relative;
   object-fit: cover;
   width: 1em;
   height: 1em;
 }
-.button___57ALq:global(.__wab_instance) {
+.qty2 {
+  position: relative;
+  width: 20px;
+  height: auto;
+  max-width: 800px;
+  align-self: center;
+  text-align: right;
+  flex-shrink: 0;
+}
+.nftButton3 {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: flex-start;
+  width: 100%;
+  height: auto;
   max-width: 100%;
-  position: relative;
-  width: 100%;
-  left: auto;
   top: auto;
+  left: auto;
   min-width: 0;
+  padding: 0px;
 }
-@media (min-width: 0px) and (max-width: 768px) {
-  .button___57ALq:global(.__wab_instance) {
-    display: none;
-  }
-}
-.svg__nrvUa {
-  position: relative;
-  object-fit: cover;
-  width: 1em;
-  height: 1em;
-}
-.svg___9DdhK {
-  position: relative;
-  object-fit: cover;
-  width: 1em;
-  height: 1em;
-}
-.button__gKlSp:global(.__wab_instance) {
+.button__jbigo:global(.__wab_instance) {
   max-width: 100%;
-  position: relative;
   width: 100%;
-  left: auto;
-  top: auto;
   min-width: 0;
 }
 @media (min-width: 0px) and (max-width: 768px) {
-  .button__gKlSp:global(.__wab_instance) {
+  .button__jbigo:global(.__wab_instance) {
     display: none;
   }
 }
-.svg__iv6Jw {
+.svg__xbGjv {
   position: relative;
   object-fit: cover;
   width: 1em;
   height: 1em;
 }
-.svg__hrSrg {
+.svg__w1O38 {
   position: relative;
   object-fit: cover;
   width: 1em;
   height: 1em;
 }
-.button__wPrgh:global(.__wab_instance) {
+.qty3 {
+  position: relative;
+  width: 20px;
+  height: auto;
+  max-width: 800px;
+  align-self: center;
+  text-align: right;
+  flex-shrink: 0;
+}
+.nftButton4 {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: flex-start;
+  width: 100%;
+  height: auto;
   max-width: 100%;
-  position: relative;
-  width: 100%;
-  left: auto;
   top: auto;
+  left: auto;
   min-width: 0;
+  padding: 0px;
 }
-@media (min-width: 0px) and (max-width: 768px) {
-  .button__wPrgh:global(.__wab_instance) {
-    display: none;
-  }
-}
-.svg__wK3M {
-  position: relative;
-  object-fit: cover;
-  width: 1em;
-  height: 1em;
-}
-.svg___7Oq5N {
-  position: relative;
-  object-fit: cover;
-  width: 1em;
-  height: 1em;
-}
-.button__bSq1L:global(.__wab_instance) {
+.button___0Qeot:global(.__wab_instance) {
   max-width: 100%;
-  position: relative;
   width: 100%;
-  left: auto;
-  top: auto;
   min-width: 0;
 }
 @media (min-width: 0px) and (max-width: 768px) {
-  .button__bSq1L:global(.__wab_instance) {
+  .button___0Qeot:global(.__wab_instance) {
     display: none;
   }
 }
-.svg___6Rpfn {
+.svg__vgAS {
   position: relative;
   object-fit: cover;
   width: 1em;
   height: 1em;
 }
-.svg__hgjKe {
+.svg__msdGu {
   position: relative;
   object-fit: cover;
   width: 1em;
   height: 1em;
 }
-.button__nh4Da:global(.__wab_instance) {
+.qty4 {
+  position: relative;
+  width: 20px;
+  height: auto;
+  max-width: 800px;
+  align-self: center;
+  text-align: right;
+  flex-shrink: 0;
+}
+.nftButton5 {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: flex-start;
+  width: 100%;
+  height: auto;
   max-width: 100%;
-  position: relative;
-  width: 100%;
-  left: auto;
   top: auto;
+  left: auto;
+  min-width: 0;
+  padding: 0px;
+}
+.button__lm3PW:global(.__wab_instance) {
+  max-width: 100%;
+  width: 100%;
   min-width: 0;
 }
 @media (min-width: 0px) and (max-width: 768px) {
-  .button__nh4Da:global(.__wab_instance) {
+  .button__lm3PW:global(.__wab_instance) {
     display: none;
   }
 }
-.svg__cl2FO {
+.svg__kWsOt {
   position: relative;
   object-fit: cover;
   width: 1em;
   height: 1em;
 }
-.svg__tie7J {
+.svg__xgIgm {
   position: relative;
   object-fit: cover;
   width: 1em;
   height: 1em;
+}
+.qty5 {
+  position: relative;
+  width: 20px;
+  height: auto;
+  max-width: 800px;
+  align-self: center;
+  text-align: right;
+  flex-shrink: 0;
+}
+.nftButton6 {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: flex-start;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  top: auto;
+  left: auto;
+  min-width: 0;
+  padding: 0px;
+}
+.button__wihAz:global(.__wab_instance) {
+  max-width: 100%;
+  width: 100%;
+  min-width: 0;
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .button__wihAz:global(.__wab_instance) {
+    display: none;
+  }
+}
+.svg___3GrPu {
+  position: relative;
+  object-fit: cover;
+  width: 1em;
+  height: 1em;
+}
+.svg__wcmeC {
+  position: relative;
+  object-fit: cover;
+  width: 1em;
+  height: 1em;
+}
+.qty6 {
+  position: relative;
+  width: 20px;
+  height: auto;
+  max-width: 800px;
+  align-self: center;
+  text-align: right;
+  flex-shrink: 0;
+}
+.nftButton7 {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: flex-start;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  top: auto;
+  left: auto;
+  min-width: 0;
+  padding: 0px;
+}
+.button__sWn0B:global(.__wab_instance) {
+  max-width: 100%;
+  width: 100%;
+  min-width: 0;
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .button__sWn0B:global(.__wab_instance) {
+    display: none;
+  }
+}
+.svg__ff2Aa {
+  position: relative;
+  object-fit: cover;
+  width: 1em;
+  height: 1em;
+}
+.svg__yhJmx {
+  position: relative;
+  object-fit: cover;
+  width: 1em;
+  height: 1em;
+}
+.qty7 {
+  position: relative;
+  width: 20px;
+  height: auto;
+  max-width: 800px;
+  align-self: center;
+  text-align: right;
+  flex-shrink: 0;
+}
+.nftButton8 {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: flex-start;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  top: auto;
+  left: auto;
+  min-width: 0;
+  padding: 0px;
+}
+.button__sczGf:global(.__wab_instance) {
+  max-width: 100%;
+  width: 100%;
+  min-width: 0;
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .button__sczGf:global(.__wab_instance) {
+    display: none;
+  }
+}
+.svg__i47Al {
+  position: relative;
+  object-fit: cover;
+  width: 1em;
+  height: 1em;
+}
+.svg__xoHaD {
+  position: relative;
+  object-fit: cover;
+  width: 1em;
+  height: 1em;
+}
+.qty8 {
+  position: relative;
+  width: 20px;
+  height: auto;
+  max-width: 800px;
+  align-self: center;
+  text-align: right;
+  flex-shrink: 0;
 }
 .button__sAhu4:global(.__wab_instance) {
   max-width: 100%;

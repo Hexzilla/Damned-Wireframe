@@ -99,6 +99,20 @@
           "scheme": "blackbox",
           "componentType": "component",
           "plumeType": "button"
+        },
+        {
+          "id": "OWTL5yNhla1",
+          "name": "NftButton",
+          "type": "managed",
+          "projectId": "4Z3UMkZpk9iU1tNC7ianWh",
+          "renderModuleFilePath": "plasmic/the_damned_wireframe_v_1/PlasmicNftButton.tsx",
+          "importSpec": {
+            "modulePath": "NftButton.tsx"
+          },
+          "cssFilePath": "plasmic/the_damned_wireframe_v_1/PlasmicNftButton.module.css",
+          "scheme": "blackbox",
+          "componentType": "component",
+          "plumeType": "button"
         }
       ],
       "icons": [
@@ -132,6 +146,12 @@
         "name": "Screen",
         "projectId": "4Z3UMkZpk9iU1tNC7ianWh",
         "contextFilePath": "plasmic/the_damned_wireframe_v_1/PlasmicGlobalVariant__Screen.tsx"
+      },
+      {
+        "id": "uk6IcAqcUP",
+        "name": "UnnamedGlobalGroupOfVariants",
+        "projectId": "4Z3UMkZpk9iU1tNC7ianWh",
+        "contextFilePath": "plasmic/the_damned_wireframe_v_1/PlasmicGlobalVariant__UnnamedGlobalGroupOfVariants.tsx"
       }
     ]
   },
