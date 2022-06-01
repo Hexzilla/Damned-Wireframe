@@ -113,9 +113,9 @@ export const PlasmicNftButton__ArgProps = new Array<ArgPropType>(
 
 export type PlasmicNftButton__OverridesType = {
   root?: p.Flex<"button">;
-  freeBox?: p.Flex<"div">;
-  startIconContainer?: p.Flex<"div">;
   contentContainer?: p.Flex<"div">;
+  overlay?: p.Flex<"div">;
+  startIconContainer?: p.Flex<"div">;
   endIconContainer?: p.Flex<"div">;
 };
 
@@ -249,105 +249,6 @@ function PlasmicNftButton__RenderFunc(props: {
         triggerRootHoverProps
       ]}
     >
-      {(triggers.hover_root ? true : true) ? (
-        <div
-          data-plasmic-name={"freeBox"}
-          data-plasmic-override={overrides.freeBox}
-          className={classNames(projectcss.all, sty.freeBox)}
-        />
-      ) : null}
-      {(
-        hasVariant(variants, "showStartIcon", "showStartIcon") ? true : false
-      ) ? (
-        <div
-          data-plasmic-name={"startIconContainer"}
-          data-plasmic-override={overrides.startIconContainer}
-          className={classNames(projectcss.all, sty.startIconContainer, {
-            [sty.startIconContainercolor_blue]: hasVariant(
-              variants,
-              "color",
-              "blue"
-            ),
-            [sty.startIconContainershape_rounded_showStartIcon]:
-              hasVariant(variants, "shape", "rounded") &&
-              hasVariant(variants, "showStartIcon", "showStartIcon"),
-            [sty.startIconContainershowStartIcon]: hasVariant(
-              variants,
-              "showStartIcon",
-              "showStartIcon"
-            )
-          })}
-        >
-          {p.renderPlasmicSlot({
-            defaultContents: (
-              <ChecksvgIcon
-                className={classNames(projectcss.all, sty.svg__a26WI)}
-                role={"img"}
-              />
-            ),
-
-            value: args.startIcon,
-            className: classNames(sty.slotTargetStartIcon, {
-              [sty.slotTargetStartIconcolor_blue]: hasVariant(
-                variants,
-                "color",
-                "blue"
-              ),
-              [sty.slotTargetStartIconcolor_clear]: hasVariant(
-                variants,
-                "color",
-                "clear"
-              ),
-              [sty.slotTargetStartIconcolor_link]: hasVariant(
-                variants,
-                "color",
-                "link"
-              ),
-              [sty.slotTargetStartIconcolor_softBlue]: hasVariant(
-                variants,
-                "color",
-                "softBlue"
-              ),
-              [sty.slotTargetStartIconcolor_softGreen]: hasVariant(
-                variants,
-                "color",
-                "softGreen"
-              ),
-              [sty.slotTargetStartIconcolor_softRed]: hasVariant(
-                variants,
-                "color",
-                "softRed"
-              ),
-              [sty.slotTargetStartIconcolor_softSand]: hasVariant(
-                variants,
-                "color",
-                "softSand"
-              ),
-              [sty.slotTargetStartIconcolor_softYellow]: hasVariant(
-                variants,
-                "color",
-                "softYellow"
-              ),
-              [sty.slotTargetStartIconcolor_white]: hasVariant(
-                variants,
-                "color",
-                "white"
-              ),
-              [sty.slotTargetStartIconcolor_yellow]: hasVariant(
-                variants,
-                "color",
-                "yellow"
-              ),
-              [sty.slotTargetStartIconshowStartIcon]: hasVariant(
-                variants,
-                "showStartIcon",
-                "showStartIcon"
-              )
-            })
-          })}
-        </div>
-      ) : null}
-
       <div
         data-plasmic-name={"contentContainer"}
         data-plasmic-override={overrides.contentContainer}
@@ -474,6 +375,122 @@ function PlasmicNftButton__RenderFunc(props: {
         })}
       </div>
 
+      {(triggers.hover_root ? true : true) ? (
+        <p.Stack
+          as={"div"}
+          data-plasmic-name={"overlay"}
+          data-plasmic-override={overrides.overlay}
+          hasGap={true}
+          className={classNames(projectcss.all, sty.overlay)}
+        >
+          {(triggers.hover_root ? true : true) ? (
+            <Button className={classNames("__wab_instance", sty.button__otwm5)}>
+              {triggers.hover_root ? "NFT #1" : "Button"}
+            </Button>
+          ) : null}
+          {(triggers.hover_root ? true : true) ? (
+            <Button className={classNames("__wab_instance", sty.button__n2Ba5)}>
+              {triggers.hover_root ? "NFT #2" : ""}
+            </Button>
+          ) : null}
+          {(triggers.hover_root ? true : true) ? (
+            <Button className={classNames("__wab_instance", sty.button__r54KG)}>
+              {triggers.hover_root ? "NFT #3" : ""}
+            </Button>
+          ) : null}
+        </p.Stack>
+      ) : null}
+      {(
+        hasVariant(variants, "showStartIcon", "showStartIcon") ? true : false
+      ) ? (
+        <div
+          data-plasmic-name={"startIconContainer"}
+          data-plasmic-override={overrides.startIconContainer}
+          className={classNames(projectcss.all, sty.startIconContainer, {
+            [sty.startIconContainercolor_blue]: hasVariant(
+              variants,
+              "color",
+              "blue"
+            ),
+            [sty.startIconContainershape_rounded_showStartIcon]:
+              hasVariant(variants, "shape", "rounded") &&
+              hasVariant(variants, "showStartIcon", "showStartIcon"),
+            [sty.startIconContainershowStartIcon]: hasVariant(
+              variants,
+              "showStartIcon",
+              "showStartIcon"
+            )
+          })}
+        >
+          {p.renderPlasmicSlot({
+            defaultContents: (
+              <ChecksvgIcon
+                className={classNames(projectcss.all, sty.svg__a26WI)}
+                role={"img"}
+              />
+            ),
+
+            value: args.startIcon,
+            className: classNames(sty.slotTargetStartIcon, {
+              [sty.slotTargetStartIconcolor_blue]: hasVariant(
+                variants,
+                "color",
+                "blue"
+              ),
+              [sty.slotTargetStartIconcolor_clear]: hasVariant(
+                variants,
+                "color",
+                "clear"
+              ),
+              [sty.slotTargetStartIconcolor_link]: hasVariant(
+                variants,
+                "color",
+                "link"
+              ),
+              [sty.slotTargetStartIconcolor_softBlue]: hasVariant(
+                variants,
+                "color",
+                "softBlue"
+              ),
+              [sty.slotTargetStartIconcolor_softGreen]: hasVariant(
+                variants,
+                "color",
+                "softGreen"
+              ),
+              [sty.slotTargetStartIconcolor_softRed]: hasVariant(
+                variants,
+                "color",
+                "softRed"
+              ),
+              [sty.slotTargetStartIconcolor_softSand]: hasVariant(
+                variants,
+                "color",
+                "softSand"
+              ),
+              [sty.slotTargetStartIconcolor_softYellow]: hasVariant(
+                variants,
+                "color",
+                "softYellow"
+              ),
+              [sty.slotTargetStartIconcolor_white]: hasVariant(
+                variants,
+                "color",
+                "white"
+              ),
+              [sty.slotTargetStartIconcolor_yellow]: hasVariant(
+                variants,
+                "color",
+                "yellow"
+              ),
+              [sty.slotTargetStartIconshowStartIcon]: hasVariant(
+                variants,
+                "showStartIcon",
+                "showStartIcon"
+              )
+            })
+          })}
+        </div>
+      ) : null}
       {(hasVariant(variants, "showEndIcon", "showEndIcon") ? true : false) ? (
         <div
           data-plasmic-name={"endIconContainer"}
@@ -560,21 +577,6 @@ function PlasmicNftButton__RenderFunc(props: {
           })}
         </div>
       ) : null}
-      {(triggers.hover_root ? true : true) ? (
-        <Button className={classNames("__wab_instance", sty.button__e2Jqn)}>
-          {triggers.hover_root ? "NFT #1" : "Button"}
-        </Button>
-      ) : null}
-      {(triggers.hover_root ? true : false) ? (
-        <Button className={classNames("__wab_instance", sty.button__qzFk7)}>
-          {triggers.hover_root ? "NFT #3" : "Button"}
-        </Button>
-      ) : null}
-      {(triggers.hover_root ? true : false) ? (
-        <Button className={classNames("__wab_instance", sty.button___7JCk8)}>
-          {triggers.hover_root ? "NFT #2" : "Button"}
-        </Button>
-      ) : null}
     </p.Stack>
   ) as React.ReactElement | null;
 }
@@ -608,14 +610,14 @@ function useBehavior<P extends pp.BaseButtonProps>(
 const PlasmicDescendants = {
   root: [
     "root",
-    "freeBox",
-    "startIconContainer",
     "contentContainer",
+    "overlay",
+    "startIconContainer",
     "endIconContainer"
   ],
-  freeBox: ["freeBox"],
-  startIconContainer: ["startIconContainer"],
   contentContainer: ["contentContainer"],
+  overlay: ["overlay"],
+  startIconContainer: ["startIconContainer"],
   endIconContainer: ["endIconContainer"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
@@ -623,9 +625,9 @@ type DescendantsType<T extends NodeNameType> =
   typeof PlasmicDescendants[T][number];
 type NodeDefaultElementType = {
   root: "button";
-  freeBox: "div";
-  startIconContainer: "div";
   contentContainer: "div";
+  overlay: "div";
+  startIconContainer: "div";
   endIconContainer: "div";
 };
 
@@ -686,9 +688,9 @@ export const PlasmicNftButton = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
-    freeBox: makeNodeComponent("freeBox"),
-    startIconContainer: makeNodeComponent("startIconContainer"),
     contentContainer: makeNodeComponent("contentContainer"),
+    overlay: makeNodeComponent("overlay"),
+    startIconContainer: makeNodeComponent("startIconContainer"),
     endIconContainer: makeNodeComponent("endIconContainer"),
 
     // Metadata about props expected for PlasmicNftButton

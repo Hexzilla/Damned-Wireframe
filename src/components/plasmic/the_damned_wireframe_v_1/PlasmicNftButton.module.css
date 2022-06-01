@@ -4,8 +4,9 @@
   position: relative;
   background: #232320;
   cursor: pointer;
-  transition-property: background;
-  transition-duration: 0.1s;
+  transition-property: all;
+  transition-duration: 1s;
+  transition-timing-function: ease-in-out;
   border-radius: 6px;
   padding: 12px 20px;
   border-width: 0px;
@@ -192,93 +193,14 @@
 .rootcolor_blue:active {
   background: #52a9ff;
 }
-.freeBox {
-  position: relative;
-  width: 100%;
-  height: auto;
-  max-width: 100%;
-  overflow: visible;
-  backdrop-filter: none;
-  background: none;
-  min-width: 0;
-  display: none;
-  -webkit-backdrop-filter: none;
-  padding: 8px;
-}
-.root:hover .freeBox {
-  position: absolute;
-  left: -11px;
-  top: -16px;
-  width: 321px;
-  padding-right: 0px;
-  min-width: 545px;
-  min-height: 133px;
-  backdrop-filter: none;
-  background: none;
-  z-index: 3;
-  flex-shrink: 0;
-  display: block;
-  -webkit-backdrop-filter: none;
-}
-.startIconContainer {
-  display: flex;
-  position: relative;
-  flex-direction: row;
-  align-items: stretch;
-  justify-content: flex-start;
-}
-.startIconContainershowStartIcon {
-  display: flex;
-}
-.slotTargetStartIcon {
-  color: #ededec;
-}
-.slotTargetStartIconcolor_yellow {
-  color: #35290f;
-}
-.slotTargetStartIconcolor_white {
-  color: #35290f;
-}
-.slotTargetStartIconcolor_softBlue {
-  color: #006adc;
-}
-.slotTargetStartIconcolor_softGreen {
-  color: #18794e;
-}
-.slotTargetStartIconcolor_softYellow {
-  color: #946800;
-}
-.slotTargetStartIconcolor_softRed {
-  color: #ca3214;
-}
-.slotTargetStartIconcolor_softSand {
-  color: #706f6c;
-}
-.slotTargetStartIconcolor_clear {
-  color: #1b1b18;
-}
-.slotTargetStartIconcolor_link {
-  color: #0091ff;
-}
-.rootcolor_link:hover .slotTargetStartIconcolor_link {
-  color: #0081f1;
-}
-.rootcolor_link:active .slotTargetStartIconcolor_link {
-  color: #006adc;
-}
-.svg__a26WI {
-  position: relative;
-  object-fit: cover;
-  width: 1em;
-  height: 1em;
-  flex-shrink: 0;
-}
 .contentContainer {
   display: flex;
   position: relative;
   flex-direction: row;
   align-items: stretch;
   justify-content: flex-start;
+  left: auto;
+  top: auto;
 }
 .root .contentContainer___focusVisibleWithin {
   outline: none;
@@ -418,12 +340,249 @@
 .rootcolor_link:active .slotTargetChildrencolor_link {
   color: #006adc;
 }
+.overlay {
+  flex-direction: row;
+  display: flex;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  max-width: 0%;
+  overflow: visible;
+  backdrop-filter: none;
+  background: none;
+  left: -44px;
+  top: -10px;
+  transition-property: all;
+  transition-duration: 1s;
+  transition-timing-function: ease-in-out;
+  flex-shrink: 0;
+  -webkit-backdrop-filter: none;
+  padding: 8px;
+}
+.overlay > :global(.__wab_flex-container) {
+  flex-direction: row;
+  margin-left: calc(0px - 0px);
+  width: calc(100% + 0px);
+}
+.overlay > :global(.__wab_flex-container) > *,
+.overlay > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+.overlay > :global(.__wab_flex-container) > picture > img,
+.overlay
+  > :global(.__wab_flex-container)
+  > :global(.__wab_slot)
+  > picture
+  > img {
+  margin-left: 0px;
+}
+.root:hover .overlay {
+  position: absolute;
+  left: 81px;
+  top: -21px;
+  width: 458px;
+  padding-right: 0px;
+  min-width: 478px;
+  min-height: 133px;
+  backdrop-filter: none;
+  background: none;
+  z-index: 3;
+  margin-right: 0px;
+  display: flex;
+  flex-direction: row;
+  padding-left: 9px;
+  flex-shrink: 0;
+  -webkit-backdrop-filter: none;
+}
+.root:hover .overlay > :global(.__wab_flex-container) {
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-left: calc(0px - 31px);
+  width: calc(100% + 31px);
+  margin-top: calc(0px - 0px);
+  height: calc(100% + 0px);
+}
+.root:hover .overlay > :global(.__wab_flex-container) > *,
+.root:hover
+  .overlay
+  > :global(.__wab_flex-container)
+  > :global(.__wab_slot)
+  > *,
+.root:hover .overlay > :global(.__wab_flex-container) > picture > img,
+.root:hover
+  .overlay
+  > :global(.__wab_flex-container)
+  > :global(.__wab_slot)
+  > picture
+  > img {
+  margin-left: 31px;
+  margin-top: 0px;
+}
+.button__otwm5:global(.__wab_instance) {
+  max-width: 0%;
+  position: relative;
+  left: auto;
+  top: auto;
+  opacity: 0;
+  display: flex;
+}
+.root:hover .button__otwm5:global(.__wab_instance) {
+  position: relative;
+  left: auto;
+  top: auto;
+  width: 100px;
+  height: 100px;
+  max-width: 100%;
+  max-height: 100px;
+  opacity: 1;
+  flex-shrink: 0;
+  display: flex;
+}
+.svg__yL7Qw {
+  position: relative;
+  object-fit: cover;
+  width: 1em;
+  height: 1em;
+}
+.svg__tam9A {
+  position: relative;
+  object-fit: cover;
+  width: 1em;
+  height: 1em;
+}
+.button__n2Ba5:global(.__wab_instance) {
+  max-width: 0%;
+  position: relative;
+  left: auto;
+  top: auto;
+  opacity: 0;
+  display: flex;
+}
+.root:hover .button__n2Ba5:global(.__wab_instance) {
+  position: relative;
+  left: auto;
+  top: auto;
+  width: 100px;
+  height: 100px;
+  z-index: 2;
+  max-width: 100%;
+  max-height: 100px;
+  opacity: 1;
+  flex-shrink: 0;
+  display: flex;
+}
+.svg__nnPdv {
+  position: relative;
+  object-fit: cover;
+  width: 1em;
+  height: 1em;
+}
+.svg___6MqIo {
+  position: relative;
+  object-fit: cover;
+  width: 1em;
+  height: 1em;
+}
+.button__r54KG:global(.__wab_instance) {
+  max-width: 0%;
+  position: relative;
+  left: auto;
+  top: auto;
+  width: 0px;
+  opacity: 0;
+  flex-shrink: 0;
+  display: flex;
+}
+.root:hover .button__r54KG:global(.__wab_instance) {
+  position: relative;
+  left: auto;
+  top: auto;
+  width: 100px;
+  height: 100px;
+  max-width: 100%;
+  max-height: 100px;
+  opacity: 1;
+  flex-shrink: 0;
+  display: flex;
+}
+.svg__aRrB {
+  position: relative;
+  object-fit: cover;
+  width: 1em;
+  height: 1em;
+}
+.svg__sThi {
+  position: relative;
+  object-fit: cover;
+  width: 1em;
+  height: 1em;
+}
+.startIconContainer {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: flex-start;
+  left: auto;
+  top: auto;
+  bottom: auto;
+  right: auto;
+}
+.startIconContainershowStartIcon {
+  display: flex;
+}
+.slotTargetStartIcon {
+  color: #ededec;
+}
+.slotTargetStartIconcolor_yellow {
+  color: #35290f;
+}
+.slotTargetStartIconcolor_white {
+  color: #35290f;
+}
+.slotTargetStartIconcolor_softBlue {
+  color: #006adc;
+}
+.slotTargetStartIconcolor_softGreen {
+  color: #18794e;
+}
+.slotTargetStartIconcolor_softYellow {
+  color: #946800;
+}
+.slotTargetStartIconcolor_softRed {
+  color: #ca3214;
+}
+.slotTargetStartIconcolor_softSand {
+  color: #706f6c;
+}
+.slotTargetStartIconcolor_clear {
+  color: #1b1b18;
+}
+.slotTargetStartIconcolor_link {
+  color: #0091ff;
+}
+.rootcolor_link:hover .slotTargetStartIconcolor_link {
+  color: #0081f1;
+}
+.rootcolor_link:active .slotTargetStartIconcolor_link {
+  color: #006adc;
+}
+.svg__a26WI {
+  position: relative;
+  object-fit: cover;
+  width: 1em;
+  height: 1em;
+  flex-shrink: 0;
+}
 .endIconContainer {
   display: flex;
   position: relative;
   flex-direction: row;
   align-items: stretch;
   justify-content: flex-start;
+  left: auto;
+  top: auto;
+  bottom: auto;
+  right: auto;
 }
 .endIconContainershowEndIcon {
   display: flex;
@@ -470,83 +629,4 @@
   width: 1em;
   height: 1em;
   flex-shrink: 0;
-}
-.button__e2Jqn:global(.__wab_instance) {
-  max-width: 100%;
-  position: relative;
-  display: none;
-}
-.root:hover .button__e2Jqn:global(.__wab_instance) {
-  position: absolute;
-  left: 160px;
-  top: 0px;
-  width: 100px;
-  height: 100px;
-  flex-shrink: 0;
-  display: flex;
-}
-.svg__jjZab {
-  position: relative;
-  object-fit: cover;
-  width: 1em;
-  height: 1em;
-}
-.svg__rIXdc {
-  position: relative;
-  object-fit: cover;
-  width: 1em;
-  height: 1em;
-}
-.button__qzFk7:global(.__wab_instance) {
-  max-width: 100%;
-  position: relative;
-  plasmic-display-none: true;
-}
-.root:hover .button__qzFk7:global(.__wab_instance) {
-  position: absolute;
-  left: 432px;
-  top: 0px;
-  width: 100px;
-  height: 100px;
-  flex-shrink: 0;
-  display: flex;
-}
-.svg___3PDeS {
-  position: relative;
-  object-fit: cover;
-  width: 1em;
-  height: 1em;
-}
-.svg__ovIhZ {
-  position: relative;
-  object-fit: cover;
-  width: 1em;
-  height: 1em;
-}
-.button___7JCk8:global(.__wab_instance) {
-  max-width: 100%;
-  position: relative;
-  plasmic-display-none: true;
-}
-.root:hover .button___7JCk8:global(.__wab_instance) {
-  position: absolute;
-  left: 300px;
-  top: 0px;
-  width: 100px;
-  height: 100px;
-  z-index: 2;
-  flex-shrink: 0;
-  display: flex;
-}
-.svg___5MOgM {
-  position: relative;
-  object-fit: cover;
-  width: 1em;
-  height: 1em;
-}
-.svg__bhua4 {
-  position: relative;
-  object-fit: cover;
-  width: 1em;
-  height: 1em;
 }

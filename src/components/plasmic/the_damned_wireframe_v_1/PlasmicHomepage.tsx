@@ -185,7 +185,7 @@ function PlasmicHomepage__RenderFunc(props: {
                   : ("compact" as const)
               }
             >
-              {"Paint & Sins"}
+              {"IRL Events"}
             </Button>
 
             {true ? (
