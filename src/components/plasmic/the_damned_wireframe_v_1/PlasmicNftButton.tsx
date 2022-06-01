@@ -391,7 +391,7 @@ function PlasmicNftButton__RenderFunc(props: {
         >
           {(triggers.hover_root ? true : true) ? (
             <Button className={classNames("__wab_instance", sty.button__otwm5)}>
-              {triggers.hover_root ? "NFT #1" : "Button"}
+              {triggers.hover_root ? "NFT #1" : ""}
             </Button>
           ) : null}
           {(triggers.hover_root ? true : true) ? (

@@ -430,11 +430,15 @@
   margin-top: 0px;
 }
 .button__otwm5:global(.__wab_instance) {
-  max-width: 0%;
+  max-width: 1px;
   position: relative;
   left: auto;
   top: auto;
   opacity: 0;
+  width: 1px;
+  height: 1px;
+  max-height: 1px;
+  flex-shrink: 0;
   display: flex;
 }
 .root:hover .button__otwm5:global(.__wab_instance) {
@@ -462,11 +466,15 @@
   height: 1em;
 }
 .button__n2Ba5:global(.__wab_instance) {
-  max-width: 0%;
+  max-width: 1px;
   position: relative;
   left: auto;
   top: auto;
   opacity: 0;
+  width: 1px;
+  height: 1px;
+  max-height: 1px;
+  flex-shrink: 0;
   display: flex;
 }
 .root:hover .button__n2Ba5:global(.__wab_instance) {
@@ -495,12 +503,14 @@
   height: 1em;
 }
 .button__r54KG:global(.__wab_instance) {
-  max-width: 0%;
+  max-width: 1px;
   position: relative;
   left: auto;
   top: auto;
-  width: 0px;
+  width: 1px;
   opacity: 0;
+  height: 1px;
+  max-height: 1px;
   flex-shrink: 0;
   display: flex;
 }
