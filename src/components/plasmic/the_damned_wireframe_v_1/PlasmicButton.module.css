@@ -4,8 +4,9 @@
   position: relative;
   background: #232320;
   cursor: pointer;
-  transition-property: background;
-  transition-duration: 0.1s;
+  transition-property: all;
+  transition-duration: 1s;
+  transition-timing-function: ease-in-out;
   border-radius: 6px;
   padding: 12px 20px;
   border-width: 0px;
@@ -251,6 +252,8 @@
   flex-direction: row;
   align-items: stretch;
   justify-content: flex-start;
+  transition-property: all;
+  transition-duration: 1s;
 }
 .root .contentContainer___focusVisibleWithin {
   outline: none;
