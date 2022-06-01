@@ -31,8 +31,8 @@ import {
   deriveRenderOpts,
   ensureGlobalVariants
 } from "@plasmicapp/react-web";
+import MainMenu from "../../MainMenu"; // plasmic-import: 5OPwbvd_XQK/component
 import Button from "../../Button"; // plasmic-import: 9U02DESJlfv/component
-import NftButton from "../../NftButton"; // plasmic-import: OWTL5yNhla1/component
 import { Reveal } from "@plasmicpkgs/react-awesome-reveal"; // plasmic-import: R6s1FdhksG/codeComponent
 
 import { useScreenVariants as useScreenVariantssKPzWh1XRaeiy } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: sKPzWh1XRaeiy/globalVariant
@@ -44,6 +44,7 @@ import sty from "./PlasmicHomepage.module.css"; // plasmic-import: kWxJ1fA34dtB/
 
 import ChecksvgIcon from "./icons/PlasmicIcon__Checksvg"; // plasmic-import: 9vaXCj4SKKO/icon
 import IconIcon from "./icons/PlasmicIcon__Icon"; // plasmic-import: gfMcd0a2-6W/icon
+import ProfileSvgrepoComsvgIcon from "./icons/PlasmicIcon__ProfileSvgrepoComsvg"; // plasmic-import: odUkh9DYHA/icon
 import imageNjSfrrcy2 from "./images/image.png"; // plasmic-import: njSfrrcy2/picture
 
 export type PlasmicHomepage__VariantMembers = {
@@ -66,24 +67,12 @@ export const PlasmicHomepage__ArgProps = new Array<ArgPropType>();
 export type PlasmicHomepage__OverridesType = {
   root?: p.Flex<"div">;
   header?: p.Flex<"div">;
-  menu?: p.Flex<"div">;
-  qty?: p.Flex<"div">;
-  nftButton2?: p.Flex<"div">;
-  qty2?: p.Flex<"div">;
-  nftButton3?: p.Flex<"div">;
-  qty3?: p.Flex<"div">;
-  nftButton4?: p.Flex<"div">;
-  qty4?: p.Flex<"div">;
-  nftButton5?: p.Flex<"div">;
-  qty5?: p.Flex<"div">;
-  nftButton6?: p.Flex<"div">;
-  qty6?: p.Flex<"div">;
-  nftButton7?: p.Flex<"div">;
-  qty7?: p.Flex<"div">;
-  nftButton8?: p.Flex<"div">;
-  qty8?: p.Flex<"div">;
+  mainMenu?: p.Flex<typeof MainMenu>;
   spacer?: p.Flex<"div">;
   profile?: p.Flex<"div">;
+  button?: p.Flex<typeof Button>;
+  svg?: p.Flex<"svg">;
+  link?: p.Flex<"a">;
   h1?: p.Flex<"h1">;
 };
 
@@ -135,386 +124,11 @@ function PlasmicHomepage__RenderFunc(props: {
           data-plasmic-override={overrides.header}
           className={classNames(projectcss.all, sty.header)}
         >
-          <p.Stack
-            as={"div"}
-            data-plasmic-name={"menu"}
-            data-plasmic-override={overrides.menu}
-            hasGap={true}
-            className={classNames(projectcss.all, sty.menu)}
-          >
-            <Button
-              className={classNames("__wab_instance", sty.button__tQeMn)}
-              size={"compact" as const}
-            >
-              {"Logo"}
-            </Button>
-
-            <Button
-              className={classNames("__wab_instance", sty.button__ihuIo)}
-              size={
-                hasVariant(globalVariants, "screen", "mobileOnly")
-                  ? ("compact" as const)
-                  : hasVariant(globalVariants, "screen", "smallScreen")
-                  ? ("minimal" as const)
-                  : ("compact" as const)
-              }
-            >
-              {"Lore"}
-            </Button>
-
-            <Button
-              className={classNames("__wab_instance", sty.button__qRPB)}
-              size={
-                hasVariant(globalVariants, "screen", "mobileOnly")
-                  ? ("compact" as const)
-                  : hasVariant(globalVariants, "screen", "smallScreen")
-                  ? ("minimal" as const)
-                  : ("compact" as const)
-              }
-            >
-              {"Roadmap"}
-            </Button>
-
-            <Button
-              className={classNames("__wab_instance", sty.button___7ZyHz)}
-              size={
-                hasVariant(globalVariants, "screen", "mobileOnly")
-                  ? ("compact" as const)
-                  : hasVariant(globalVariants, "screen", "smallScreen")
-                  ? ("minimal" as const)
-                  : ("compact" as const)
-              }
-            >
-              {"IRL Events"}
-            </Button>
-
-            {true ? (
-              <div className={classNames(projectcss.all, sty.freeBox__nX7Hs)}>
-                <NftButton
-                  className={classNames("__wab_instance", sty.nftButton__pTopd)}
-                  size={"compact" as const}
-                >
-                  {"Limbo"}
-                </NftButton>
-
-                <div
-                  data-plasmic-name={"qty"}
-                  data-plasmic-override={overrides.qty}
-                  className={classNames(
-                    projectcss.all,
-                    projectcss.__wab_text,
-                    sty.qty
-                  )}
-                >
-                  {"x3"}
-                </div>
-              </div>
-            ) : null}
-            {true ? (
-              <div
-                data-plasmic-name={"nftButton2"}
-                data-plasmic-override={overrides.nftButton2}
-                className={classNames(projectcss.all, sty.nftButton2)}
-              >
-                {(
-                  hasVariant(globalVariants, "screen", "mobileOnly")
-                    ? true
-                    : true
-                ) ? (
-                  <Button
-                    className={classNames("__wab_instance", sty.button__tBnJt)}
-                    size={
-                      hasVariant(globalVariants, "screen", "smallScreen")
-                        ? ("minimal" as const)
-                        : ("compact" as const)
-                    }
-                  >
-                    {"Lust"}
-                  </Button>
-                ) : null}
-
-                <div
-                  data-plasmic-name={"qty2"}
-                  data-plasmic-override={overrides.qty2}
-                  className={classNames(
-                    projectcss.all,
-                    projectcss.__wab_text,
-                    sty.qty2
-                  )}
-                >
-                  {"x0"}
-                </div>
-              </div>
-            ) : null}
-            {true ? (
-              <div
-                data-plasmic-name={"nftButton3"}
-                data-plasmic-override={overrides.nftButton3}
-                className={classNames(projectcss.all, sty.nftButton3)}
-              >
-                {(
-                  hasVariant(globalVariants, "screen", "mobileOnly")
-                    ? true
-                    : true
-                ) ? (
-                  <Button
-                    className={classNames("__wab_instance", sty.button__jbigo)}
-                    size={
-                      hasVariant(globalVariants, "screen", "smallScreen")
-                        ? ("minimal" as const)
-                        : ("compact" as const)
-                    }
-                  >
-                    {"Gluttony"}
-                  </Button>
-                ) : null}
-
-                <div
-                  data-plasmic-name={"qty3"}
-                  data-plasmic-override={overrides.qty3}
-                  className={classNames(
-                    projectcss.all,
-                    projectcss.__wab_text,
-                    sty.qty3
-                  )}
-                >
-                  {"x0"}
-                </div>
-              </div>
-            ) : null}
-            {true ? (
-              <div
-                data-plasmic-name={"nftButton4"}
-                data-plasmic-override={overrides.nftButton4}
-                className={classNames(projectcss.all, sty.nftButton4)}
-              >
-                {(
-                  hasVariant(globalVariants, "screen", "mobileOnly")
-                    ? true
-                    : true
-                ) ? (
-                  <Button
-                    className={classNames("__wab_instance", sty.button___0Qeot)}
-                    size={
-                      hasVariant(globalVariants, "screen", "smallScreen")
-                        ? ("minimal" as const)
-                        : ("compact" as const)
-                    }
-                  >
-                    {"Greed"}
-                  </Button>
-                ) : null}
-
-                <div
-                  data-plasmic-name={"qty4"}
-                  data-plasmic-override={overrides.qty4}
-                  className={classNames(
-                    projectcss.all,
-                    projectcss.__wab_text,
-                    sty.qty4
-                  )}
-                >
-                  {"x0"}
-                </div>
-              </div>
-            ) : null}
-            {true ? (
-              <div
-                data-plasmic-name={"nftButton5"}
-                data-plasmic-override={overrides.nftButton5}
-                className={classNames(projectcss.all, sty.nftButton5)}
-              >
-                {(
-                  hasVariant(globalVariants, "screen", "mobileOnly")
-                    ? true
-                    : true
-                ) ? (
-                  <Button
-                    className={classNames("__wab_instance", sty.button__lm3PW)}
-                    size={
-                      hasVariant(globalVariants, "screen", "smallScreen")
-                        ? ("minimal" as const)
-                        : ("compact" as const)
-                    }
-                  >
-                    {"Anger"}
-                  </Button>
-                ) : null}
-
-                <div
-                  data-plasmic-name={"qty5"}
-                  data-plasmic-override={overrides.qty5}
-                  className={classNames(
-                    projectcss.all,
-                    projectcss.__wab_text,
-                    sty.qty5
-                  )}
-                >
-                  {"x0"}
-                </div>
-              </div>
-            ) : null}
-            {true ? (
-              <div
-                data-plasmic-name={"nftButton6"}
-                data-plasmic-override={overrides.nftButton6}
-                className={classNames(projectcss.all, sty.nftButton6)}
-              >
-                {(
-                  hasVariant(globalVariants, "screen", "mobileOnly")
-                    ? true
-                    : true
-                ) ? (
-                  <Button
-                    className={classNames("__wab_instance", sty.button__wihAz)}
-                    size={
-                      hasVariant(globalVariants, "screen", "smallScreen")
-                        ? ("minimal" as const)
-                        : ("compact" as const)
-                    }
-                  >
-                    {"Heresy"}
-                  </Button>
-                ) : null}
-
-                <div
-                  data-plasmic-name={"qty6"}
-                  data-plasmic-override={overrides.qty6}
-                  className={classNames(
-                    projectcss.all,
-                    projectcss.__wab_text,
-                    sty.qty6
-                  )}
-                >
-                  {"x0"}
-                </div>
-              </div>
-            ) : null}
-            {true ? (
-              <div
-                data-plasmic-name={"nftButton7"}
-                data-plasmic-override={overrides.nftButton7}
-                className={classNames(projectcss.all, sty.nftButton7)}
-              >
-                {(
-                  hasVariant(globalVariants, "screen", "mobileOnly")
-                    ? true
-                    : true
-                ) ? (
-                  <Button
-                    className={classNames("__wab_instance", sty.button__sWn0B)}
-                    size={
-                      hasVariant(globalVariants, "screen", "smallScreen")
-                        ? ("minimal" as const)
-                        : ("compact" as const)
-                    }
-                  >
-                    {"Violence"}
-                  </Button>
-                ) : null}
-
-                <div
-                  data-plasmic-name={"qty7"}
-                  data-plasmic-override={overrides.qty7}
-                  className={classNames(
-                    projectcss.all,
-                    projectcss.__wab_text,
-                    sty.qty7
-                  )}
-                >
-                  {"x0"}
-                </div>
-              </div>
-            ) : null}
-            {true ? (
-              <div
-                data-plasmic-name={"nftButton8"}
-                data-plasmic-override={overrides.nftButton8}
-                className={classNames(projectcss.all, sty.nftButton8)}
-              >
-                {(
-                  hasVariant(globalVariants, "screen", "mobileOnly")
-                    ? true
-                    : true
-                ) ? (
-                  <Button
-                    className={classNames("__wab_instance", sty.button__sczGf)}
-                    size={
-                      hasVariant(globalVariants, "screen", "smallScreen")
-                        ? ("minimal" as const)
-                        : ("compact" as const)
-                    }
-                  >
-                    {"Fraud"}
-                  </Button>
-                ) : null}
-
-                <div
-                  data-plasmic-name={"qty8"}
-                  data-plasmic-override={overrides.qty8}
-                  className={classNames(
-                    projectcss.all,
-                    projectcss.__wab_text,
-                    sty.qty8
-                  )}
-                >
-                  {"x0"}
-                </div>
-              </div>
-            ) : null}
-
-            <Button
-              className={classNames("__wab_instance", sty.button__sAhu4)}
-              size={
-                hasVariant(globalVariants, "screen", "mobileOnly")
-                  ? ("compact" as const)
-                  : hasVariant(globalVariants, "screen", "smallScreen")
-                  ? ("minimal" as const)
-                  : ("compact" as const)
-              }
-            >
-              {"Throne"}
-            </Button>
-
-            <Button
-              className={classNames("__wab_instance", sty.button__ajdeK)}
-              size={
-                hasVariant(globalVariants, "screen", "mobileOnly")
-                  ? ("compact" as const)
-                  : hasVariant(globalVariants, "screen", "smallScreen")
-                  ? ("minimal" as const)
-                  : ("compact" as const)
-              }
-            >
-              {"FAQ"}
-            </Button>
-
-            <Button
-              className={classNames("__wab_instance", sty.button__exLiq)}
-              size={
-                hasVariant(globalVariants, "screen", "mobileOnly")
-                  ? ("compact" as const)
-                  : hasVariant(globalVariants, "screen", "smallScreen")
-                  ? ("minimal" as const)
-                  : ("compact" as const)
-              }
-            >
-              {"Team"}
-            </Button>
-
-            <Button
-              className={classNames("__wab_instance", sty.button__d7MV5)}
-              size={
-                hasVariant(globalVariants, "screen", "mobileOnly")
-                  ? ("compact" as const)
-                  : hasVariant(globalVariants, "screen", "smallScreen")
-                  ? ("minimal" as const)
-                  : ("compact" as const)
-              }
-            >
-              {"Contact"}
-            </Button>
-          </p.Stack>
+          <MainMenu
+            data-plasmic-name={"mainMenu"}
+            data-plasmic-override={overrides.mainMenu}
+            className={classNames("__wab_instance", sty.mainMenu)}
+          />
 
           <div
             data-plasmic-name={"spacer"}
@@ -531,26 +145,37 @@ function PlasmicHomepage__RenderFunc(props: {
               className={classNames(projectcss.all, sty.profile)}
             >
               <Button
-                className={classNames("__wab_instance", sty.button__o0CYd, {
-                  [sty.buttonsynced__o0CYdOtsOf]: hasVariant(
-                    variants,
-                    "synced",
-                    "synced"
-                  )
+                data-plasmic-name={"button"}
+                data-plasmic-override={overrides.button}
+                className={classNames("__wab_instance", sty.button, {
+                  [sty.buttonsynced]: hasVariant(variants, "synced", "synced")
                 })}
               >
-                {hasVariant(variants, "synced", "synced") ? "Unsync" : "Sync"}
+                {hasVariant(variants, "synced", "synced") ? "Unsync" : "Unsync"}
               </Button>
 
-              <div
-                className={classNames(
-                  projectcss.all,
-                  projectcss.__wab_text,
-                  sty.text__mGgux
-                )}
+              <ProfileSvgrepoComsvgIcon
+                data-plasmic-name={"svg"}
+                data-plasmic-override={overrides.svg}
+                className={classNames(projectcss.all, sty.svg)}
+                role={"img"}
+              />
+
+              <a
+                data-plasmic-name={"link"}
+                data-plasmic-override={overrides.link}
+                className={classNames(projectcss.all, projectcss.a, sty.link)}
               >
-                {"Edit Profile"}
-              </div>
+                <div
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.text__mGgux
+                  )}
+                >
+                  {"Edit Profile"}
+                </div>
+              </a>
             </div>
           ) : null}
         </div>
@@ -645,82 +270,21 @@ const PlasmicDescendants = {
   root: [
     "root",
     "header",
-    "menu",
-    "qty",
-    "nftButton2",
-    "qty2",
-    "nftButton3",
-    "qty3",
-    "nftButton4",
-    "qty4",
-    "nftButton5",
-    "qty5",
-    "nftButton6",
-    "qty6",
-    "nftButton7",
-    "qty7",
-    "nftButton8",
-    "qty8",
+    "mainMenu",
     "spacer",
     "profile",
+    "button",
+    "svg",
+    "link",
     "h1"
   ],
-  header: [
-    "header",
-    "menu",
-    "qty",
-    "nftButton2",
-    "qty2",
-    "nftButton3",
-    "qty3",
-    "nftButton4",
-    "qty4",
-    "nftButton5",
-    "qty5",
-    "nftButton6",
-    "qty6",
-    "nftButton7",
-    "qty7",
-    "nftButton8",
-    "qty8",
-    "spacer",
-    "profile"
-  ],
-  menu: [
-    "menu",
-    "qty",
-    "nftButton2",
-    "qty2",
-    "nftButton3",
-    "qty3",
-    "nftButton4",
-    "qty4",
-    "nftButton5",
-    "qty5",
-    "nftButton6",
-    "qty6",
-    "nftButton7",
-    "qty7",
-    "nftButton8",
-    "qty8"
-  ],
-  qty: ["qty"],
-  nftButton2: ["nftButton2", "qty2"],
-  qty2: ["qty2"],
-  nftButton3: ["nftButton3", "qty3"],
-  qty3: ["qty3"],
-  nftButton4: ["nftButton4", "qty4"],
-  qty4: ["qty4"],
-  nftButton5: ["nftButton5", "qty5"],
-  qty5: ["qty5"],
-  nftButton6: ["nftButton6", "qty6"],
-  qty6: ["qty6"],
-  nftButton7: ["nftButton7", "qty7"],
-  qty7: ["qty7"],
-  nftButton8: ["nftButton8", "qty8"],
-  qty8: ["qty8"],
+  header: ["header", "mainMenu", "spacer", "profile", "button", "svg", "link"],
+  mainMenu: ["mainMenu"],
   spacer: ["spacer"],
-  profile: ["profile"],
+  profile: ["profile", "button", "svg", "link"],
+  button: ["button"],
+  svg: ["svg"],
+  link: ["link"],
   h1: ["h1"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
@@ -729,24 +293,12 @@ type DescendantsType<T extends NodeNameType> =
 type NodeDefaultElementType = {
   root: "div";
   header: "div";
-  menu: "div";
-  qty: "div";
-  nftButton2: "div";
-  qty2: "div";
-  nftButton3: "div";
-  qty3: "div";
-  nftButton4: "div";
-  qty4: "div";
-  nftButton5: "div";
-  qty5: "div";
-  nftButton6: "div";
-  qty6: "div";
-  nftButton7: "div";
-  qty7: "div";
-  nftButton8: "div";
-  qty8: "div";
+  mainMenu: typeof MainMenu;
   spacer: "div";
   profile: "div";
+  button: typeof Button;
+  svg: "svg";
+  link: "a";
   h1: "h1";
 };
 
@@ -808,24 +360,12 @@ export const PlasmicHomepage = Object.assign(
   {
     // Helper components rendering sub-elements
     header: makeNodeComponent("header"),
-    menu: makeNodeComponent("menu"),
-    qty: makeNodeComponent("qty"),
-    nftButton2: makeNodeComponent("nftButton2"),
-    qty2: makeNodeComponent("qty2"),
-    nftButton3: makeNodeComponent("nftButton3"),
-    qty3: makeNodeComponent("qty3"),
-    nftButton4: makeNodeComponent("nftButton4"),
-    qty4: makeNodeComponent("qty4"),
-    nftButton5: makeNodeComponent("nftButton5"),
-    qty5: makeNodeComponent("qty5"),
-    nftButton6: makeNodeComponent("nftButton6"),
-    qty6: makeNodeComponent("qty6"),
-    nftButton7: makeNodeComponent("nftButton7"),
-    qty7: makeNodeComponent("qty7"),
-    nftButton8: makeNodeComponent("nftButton8"),
-    qty8: makeNodeComponent("qty8"),
+    mainMenu: makeNodeComponent("mainMenu"),
     spacer: makeNodeComponent("spacer"),
     profile: makeNodeComponent("profile"),
+    button: makeNodeComponent("button"),
+    svg: makeNodeComponent("svg"),
+    link: makeNodeComponent("link"),
     h1: makeNodeComponent("h1"),
 
     // Metadata about props expected for PlasmicHomepage

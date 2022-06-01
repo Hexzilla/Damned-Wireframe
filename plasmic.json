@@ -113,6 +113,19 @@
           "scheme": "blackbox",
           "componentType": "component",
           "plumeType": "button"
+        },
+        {
+          "id": "5OPwbvd_XQK",
+          "name": "MainMenu",
+          "type": "managed",
+          "projectId": "4Z3UMkZpk9iU1tNC7ianWh",
+          "renderModuleFilePath": "plasmic/the_damned_wireframe_v_1/PlasmicMainMenu.tsx",
+          "importSpec": {
+            "modulePath": "MainMenu.tsx"
+          },
+          "cssFilePath": "plasmic/the_damned_wireframe_v_1/PlasmicMainMenu.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
         }
       ],
       "icons": [
@@ -125,6 +138,11 @@
           "id": "gfMcd0a2-6W",
           "name": "IconIcon",
           "moduleFilePath": "plasmic/the_damned_wireframe_v_1/icons/PlasmicIcon__Icon.tsx"
+        },
+        {
+          "id": "odUkh9DYHA",
+          "name": "ProfileSvgrepoComsvgIcon",
+          "moduleFilePath": "plasmic/the_damned_wireframe_v_1/icons/PlasmicIcon__ProfileSvgrepoComsvg.tsx"
         }
       ],
       "images": [
