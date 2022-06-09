@@ -32,7 +32,6 @@ import {
   ensureGlobalVariants
 } from "@plasmicapp/react-web";
 import Button from "../../Button"; // plasmic-import: 9U02DESJlfv/component
-import NftButton from "../../NftButton"; // plasmic-import: OWTL5yNhla1/component
 
 import { useScreenVariants as useScreenVariantssKPzWh1XRaeiy } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: sKPzWh1XRaeiy/globalVariant
 
@@ -56,6 +55,7 @@ export const PlasmicMainMenu__ArgProps = new Array<ArgPropType>();
 
 export type PlasmicMainMenu__OverridesType = {
   root?: p.Flex<"div">;
+  nftButton?: p.Flex<"div">;
   qty?: p.Flex<"div">;
   nftButton2?: p.Flex<"div">;
   qty2?: p.Flex<"div">;
@@ -89,6 +89,7 @@ function PlasmicMainMenu__RenderFunc(props: {
   const { variants, overrides, forNode } = props;
   const args = Object.assign({}, defaultMainMenu__Args, props.args);
   const $props = args;
+  const $ctx = ph.useDataEnv?.() || {};
 
   const globalVariants = ensureGlobalVariants({
     screen: useScreenVariantssKPzWh1XRaeiy()
@@ -144,6 +145,19 @@ function PlasmicMainMenu__RenderFunc(props: {
       </Button>
 
       <Button
+        className={classNames("__wab_instance", sty.button__nAEt)}
+        size={
+          hasVariant(globalVariants, "screen", "mobileOnly")
+            ? ("compact" as const)
+            : hasVariant(globalVariants, "screen", "smallScreen")
+            ? ("minimal" as const)
+            : ("compact" as const)
+        }
+      >
+        {"Contests"}
+      </Button>
+
+      <Button
         className={classNames("__wab_instance", sty.button__qLpTt)}
         size={
           hasVariant(globalVariants, "screen", "mobileOnly")
@@ -157,17 +171,23 @@ function PlasmicMainMenu__RenderFunc(props: {
       </Button>
 
       {(hasVariant(globalVariants, "screen", "mobileOnly") ? true : true) ? (
-        <div className={classNames(projectcss.all, sty.freeBox___8PlVe)}>
-          <NftButton
-            className={classNames("__wab_instance", sty.nftButton__z5Y1O)}
+        <div
+          data-plasmic-name={"nftButton"}
+          data-plasmic-override={overrides.nftButton}
+          className={classNames(projectcss.all, sty.nftButton)}
+        >
+          <Button
+            className={classNames("__wab_instance", sty.button___0Ss0)}
             size={
               hasVariant(globalVariants, "screen", "smallScreen")
                 ? ("minimal" as const)
                 : ("compact" as const)
             }
           >
-            {"Limbo"}
-          </NftButton>
+            {hasVariant(globalVariants, "screen", "smallScreen")
+              ? "Limbo"
+              : "Limbo"}
+          </Button>
 
           <div
             data-plasmic-name={"qty"}
@@ -479,6 +499,7 @@ function PlasmicMainMenu__RenderFunc(props: {
 const PlasmicDescendants = {
   root: [
     "root",
+    "nftButton",
     "qty",
     "nftButton2",
     "qty2",
@@ -495,6 +516,7 @@ const PlasmicDescendants = {
     "nftButton8",
     "qty8"
   ],
+  nftButton: ["nftButton", "qty"],
   qty: ["qty"],
   nftButton2: ["nftButton2", "qty2"],
   qty2: ["qty2"],
@@ -516,6 +538,7 @@ type DescendantsType<T extends NodeNameType> =
   typeof PlasmicDescendants[T][number];
 type NodeDefaultElementType = {
   root: "div";
+  nftButton: "div";
   qty: "div";
   nftButton2: "div";
   qty2: "div";
@@ -590,6 +613,7 @@ export const PlasmicMainMenu = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
+    nftButton: makeNodeComponent("nftButton"),
     qty: makeNodeComponent("qty"),
     nftButton2: makeNodeComponent("nftButton2"),
     qty2: makeNodeComponent("qty2"),

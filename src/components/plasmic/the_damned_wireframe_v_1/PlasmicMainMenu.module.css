@@ -135,6 +135,38 @@
   width: 1em;
   height: 1em;
 }
+.button__nAEt:global(.__wab_instance) {
+  max-width: 100%;
+  position: relative;
+  width: 100%;
+  left: auto;
+  top: auto;
+  min-width: 0;
+}
+@media (max-width: 1000px) {
+  .button__nAEt:global(.__wab_instance) {
+    left: auto;
+    top: auto;
+  }
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .button__nAEt:global(.__wab_instance) {
+    left: auto;
+    top: auto;
+  }
+}
+.svg__un85H {
+  position: relative;
+  object-fit: cover;
+  width: 1em;
+  height: 1em;
+}
+.svg__tzP9Z {
+  position: relative;
+  object-fit: cover;
+  width: 1em;
+  height: 1em;
+}
 .button__qLpTt:global(.__wab_instance) {
   max-width: 100%;
   position: relative;
@@ -155,7 +187,7 @@
   width: 1em;
   height: 1em;
 }
-.freeBox___8PlVe {
+.nftButton {
   display: flex;
   position: relative;
   flex-direction: row;
@@ -172,23 +204,23 @@
   padding: 0px;
 }
 @media (min-width: 0px) and (max-width: 768px) {
-  .freeBox___8PlVe {
+  .nftButton {
     display: none;
   }
 }
-.nftButton__z5Y1O:global(.__wab_instance) {
+.button___0Ss0:global(.__wab_instance) {
   max-width: 100%;
   position: relative;
   width: 100%;
   min-width: 0;
 }
-.svg___57KTk {
+.svg__zmTP {
   position: relative;
   object-fit: cover;
   width: 1em;
   height: 1em;
 }
-.svg__jH97 {
+.svg__skYnY {
   position: relative;
   object-fit: cover;
   width: 1em;

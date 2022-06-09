@@ -46,6 +46,7 @@ import ChecksvgIcon from "./icons/PlasmicIcon__Checksvg"; // plasmic-import: 9va
 import IconIcon from "./icons/PlasmicIcon__Icon"; // plasmic-import: gfMcd0a2-6W/icon
 import ProfileSvgrepoComsvgIcon from "./icons/PlasmicIcon__ProfileSvgrepoComsvg"; // plasmic-import: odUkh9DYHA/icon
 import imageNjSfrrcy2 from "./images/image.png"; // plasmic-import: njSfrrcy2/picture
+import audiopng2Zz4X42Fn from "./images/audiopng2.png"; // plasmic-import: zz4X42Fn_/picture
 
 export type PlasmicHomepage__VariantMembers = {
   synced: "synced";
@@ -70,10 +71,12 @@ export type PlasmicHomepage__OverridesType = {
   mainMenu?: p.Flex<typeof MainMenu>;
   spacer?: p.Flex<"div">;
   profile?: p.Flex<"div">;
-  button?: p.Flex<typeof Button>;
+  testing?: p.Flex<"div">;
+  testingFunctions?: p.Flex<"div">;
   svg?: p.Flex<"svg">;
   link?: p.Flex<"a">;
-  h1?: p.Flex<"h1">;
+  mainContent?: p.Flex<"div">;
+  storyPoem?: p.Flex<"div">;
 };
 
 export interface DefaultHomepageProps {
@@ -93,6 +96,7 @@ function PlasmicHomepage__RenderFunc(props: {
   const { variants, overrides, forNode } = props;
   const args = Object.assign({}, defaultHomepage__Args, props.args);
   const $props = args;
+  const $ctx = ph.useDataEnv?.() || {};
 
   const globalVariants = ensureGlobalVariants({
     screen: useScreenVariantssKPzWh1XRaeiy()
@@ -127,13 +131,17 @@ function PlasmicHomepage__RenderFunc(props: {
           <MainMenu
             data-plasmic-name={"mainMenu"}
             data-plasmic-override={overrides.mainMenu}
-            className={classNames("__wab_instance", sty.mainMenu)}
+            className={classNames("__wab_instance", sty.mainMenu, {
+              [sty.mainMenusynced]: hasVariant(variants, "synced", "synced")
+            })}
           />
 
           <div
             data-plasmic-name={"spacer"}
             data-plasmic-override={overrides.spacer}
-            className={classNames(projectcss.all, sty.spacer)}
+            className={classNames(projectcss.all, sty.spacer, {
+              [sty.spacersynced]: hasVariant(variants, "synced", "synced")
+            })}
           />
 
           {(
@@ -144,63 +152,98 @@ function PlasmicHomepage__RenderFunc(props: {
               data-plasmic-override={overrides.profile}
               className={classNames(projectcss.all, sty.profile)}
             >
-              <Button
-                data-plasmic-name={"button"}
-                data-plasmic-override={overrides.button}
-                className={classNames("__wab_instance", sty.button, {
-                  [sty.buttonsynced]: hasVariant(variants, "synced", "synced")
-                })}
-              >
-                {hasVariant(variants, "synced", "synced") ? "Unsync" : "Unsync"}
-              </Button>
-
-              <ProfileSvgrepoComsvgIcon
-                data-plasmic-name={"svg"}
-                data-plasmic-override={overrides.svg}
-                className={classNames(projectcss.all, sty.svg)}
-                role={"img"}
-              />
-
-              <a
-                data-plasmic-name={"link"}
-                data-plasmic-override={overrides.link}
-                className={classNames(projectcss.all, projectcss.a, sty.link)}
-              >
+              <div className={classNames(projectcss.all, sty.freeBox__epflS)}>
                 <div
-                  className={classNames(
-                    projectcss.all,
-                    projectcss.__wab_text,
-                    sty.text__mGgux
-                  )}
+                  data-plasmic-name={"testing"}
+                  data-plasmic-override={overrides.testing}
+                  className={classNames(projectcss.all, sty.testing)}
                 >
-                  {"Edit Profile"}
+                  <div
+                    data-plasmic-name={"testingFunctions"}
+                    data-plasmic-override={overrides.testingFunctions}
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.testingFunctions
+                    )}
+                  >
+                    {"Testing functions"}
+                  </div>
+
+                  <Button
+                    className={classNames("__wab_instance", sty.button__hnVyc)}
+                    size={"compact" as const}
+                  >
+                    {"Mint Random"}
+                  </Button>
                 </div>
-              </a>
+
+                <div
+                  className={classNames(projectcss.all, sty.freeBox___5HOlO)}
+                >
+                  {(
+                    hasVariant(globalVariants, "screen", "mobileOnly")
+                      ? true
+                      : true
+                  ) ? (
+                    <Button
+                      className={classNames(
+                        "__wab_instance",
+                        sty.button__o0CYd,
+                        {
+                          [sty.buttonsynced__o0CYdOtsOf]: hasVariant(
+                            variants,
+                            "synced",
+                            "synced"
+                          )
+                        }
+                      )}
+                      isDisabled={
+                        hasVariant(globalVariants, "screen", "mobileOnly")
+                          ? true
+                          : undefined
+                      }
+                    >
+                      {hasVariant(variants, "synced", "synced")
+                        ? "Unsync"
+                        : "Unsync"}
+                    </Button>
+                  ) : null}
+
+                  <ProfileSvgrepoComsvgIcon
+                    data-plasmic-name={"svg"}
+                    data-plasmic-override={overrides.svg}
+                    className={classNames(projectcss.all, sty.svg)}
+                    role={"img"}
+                  />
+
+                  <a
+                    data-plasmic-name={"link"}
+                    data-plasmic-override={overrides.link}
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.a,
+                      sty.link
+                    )}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__mGgux
+                      )}
+                    >
+                      {"Edit Profile"}
+                    </div>
+                  </a>
+
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox___8Wyow)}
+                  />
+                </div>
+              </div>
             </div>
           ) : null}
-        </div>
-
-        <h1
-          data-plasmic-name={"h1"}
-          data-plasmic-override={overrides.h1}
-          className={classNames(
-            projectcss.all,
-            projectcss.h1,
-            projectcss.__wab_text,
-            sty.h1
-          )}
-        >
-          {"Main Content"}
-        </h1>
-
-        <div
-          className={classNames(
-            projectcss.all,
-            projectcss.__wab_text,
-            sty.text__qaRpz
-          )}
-        >
-          {""}
         </div>
 
         {true ? (
@@ -261,6 +304,107 @@ function PlasmicHomepage__RenderFunc(props: {
             />
           </Reveal>
         ) : null}
+
+        <div
+          data-plasmic-name={"mainContent"}
+          data-plasmic-override={overrides.mainContent}
+          className={classNames(projectcss.all, sty.mainContent, {
+            [sty.mainContentsynced]: hasVariant(variants, "synced", "synced")
+          })}
+        >
+          <h1
+            className={classNames(
+              projectcss.all,
+              projectcss.h1,
+              projectcss.__wab_text,
+              sty.h1__nbjLf,
+              {
+                [sty.h1synced__nbjLfOtsOf]: hasVariant(
+                  variants,
+                  "synced",
+                  "synced"
+                )
+              }
+            )}
+          >
+            {"Main Content"}
+          </h1>
+
+          <div
+            data-plasmic-name={"storyPoem"}
+            data-plasmic-override={overrides.storyPoem}
+            className={classNames(projectcss.all, sty.storyPoem)}
+          >
+            <h1
+              className={classNames(
+                projectcss.all,
+                projectcss.h1,
+                projectcss.__wab_text,
+                sty.h1__qpyG
+              )}
+            >
+              {"Story"}
+            </h1>
+
+            <h1
+              className={classNames(
+                projectcss.all,
+                projectcss.h1,
+                projectcss.__wab_text,
+                sty.h1__ySjDx
+              )}
+            >
+              {"Limbo"}
+            </h1>
+
+            <div
+              className={classNames(
+                projectcss.all,
+                projectcss.__wab_text,
+                sty.text__jdBfR
+              )}
+            >
+              {
+                "Lost souls wander through the castle of LIMBO, through the cold cobble stones that built up this fortress of woe and desolation, infinite abyss. We must find our escape through corridors of endless woe. But I never lost hope that one day I could be freed from this eternal damnation of apathy and that we would find an escape to enlightenment. Riddles lead us to a secret door, which opens out onto a beautiful blossoming garden."
+              }
+            </div>
+
+            <p.PlasmicImg
+              alt={""}
+              className={classNames(sty.img__qu30I)}
+              displayHeight={"auto" as const}
+              displayMaxHeight={"none" as const}
+              displayMaxWidth={"100%" as const}
+              displayMinHeight={"0" as const}
+              displayMinWidth={"0" as const}
+              displayWidth={"auto" as const}
+              loading={"lazy" as const}
+              src={{
+                src: audiopng2Zz4X42Fn,
+                fullWidth: 534,
+                fullHeight: 108,
+                aspectRatio: undefined
+              }}
+            />
+
+            <div className={classNames(projectcss.all, sty.freeBox__gloM)}>
+              <Button
+                className={classNames("__wab_instance", sty.button__lzfbK)}
+                isDisabled={true}
+              >
+                {"Story"}
+              </Button>
+
+              <div className={classNames(projectcss.all, sty.freeBox__xDn1)} />
+
+              <Button
+                className={classNames("__wab_instance", sty.button__frBz6)}
+              >
+                {"Poem"}
+              </Button>
+            </div>
+          </div>
+        </div>
       </p.Stack>
     </React.Fragment>
   ) as React.ReactElement | null;
@@ -273,19 +417,32 @@ const PlasmicDescendants = {
     "mainMenu",
     "spacer",
     "profile",
-    "button",
+    "testing",
+    "testingFunctions",
     "svg",
     "link",
-    "h1"
+    "mainContent",
+    "storyPoem"
   ],
-  header: ["header", "mainMenu", "spacer", "profile", "button", "svg", "link"],
+  header: [
+    "header",
+    "mainMenu",
+    "spacer",
+    "profile",
+    "testing",
+    "testingFunctions",
+    "svg",
+    "link"
+  ],
   mainMenu: ["mainMenu"],
   spacer: ["spacer"],
-  profile: ["profile", "button", "svg", "link"],
-  button: ["button"],
+  profile: ["profile", "testing", "testingFunctions", "svg", "link"],
+  testing: ["testing", "testingFunctions"],
+  testingFunctions: ["testingFunctions"],
   svg: ["svg"],
   link: ["link"],
-  h1: ["h1"]
+  mainContent: ["mainContent", "storyPoem"],
+  storyPoem: ["storyPoem"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
@@ -296,10 +453,12 @@ type NodeDefaultElementType = {
   mainMenu: typeof MainMenu;
   spacer: "div";
   profile: "div";
-  button: typeof Button;
+  testing: "div";
+  testingFunctions: "div";
   svg: "svg";
   link: "a";
-  h1: "h1";
+  mainContent: "div";
+  storyPoem: "div";
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -363,10 +522,12 @@ export const PlasmicHomepage = Object.assign(
     mainMenu: makeNodeComponent("mainMenu"),
     spacer: makeNodeComponent("spacer"),
     profile: makeNodeComponent("profile"),
-    button: makeNodeComponent("button"),
+    testing: makeNodeComponent("testing"),
+    testingFunctions: makeNodeComponent("testingFunctions"),
     svg: makeNodeComponent("svg"),
     link: makeNodeComponent("link"),
-    h1: makeNodeComponent("h1"),
+    mainContent: makeNodeComponent("mainContent"),
+    storyPoem: makeNodeComponent("storyPoem"),
 
     // Metadata about props expected for PlasmicHomepage
     internalVariantProps: PlasmicHomepage__VariantProps,

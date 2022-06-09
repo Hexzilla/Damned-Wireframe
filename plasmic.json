@@ -150,6 +150,16 @@
           "id": "njSfrrcy2",
           "name": "image",
           "filePath": "plasmic/the_damned_wireframe_v_1/images/image.png"
+        },
+        {
+          "id": "5r8CARyHQ",
+          "name": "audio.png",
+          "filePath": "plasmic/the_damned_wireframe_v_1/images/audiopng.png"
+        },
+        {
+          "id": "zz4X42Fn_",
+          "name": "audio.png 2",
+          "filePath": "plasmic/the_damned_wireframe_v_1/images/audiopng2.png"
         }
       ],
       "indirect": false,
@@ -174,6 +184,6 @@
     ]
   },
   "wrapPagesWithGlobalContexts": true,
-  "cliVersion": "0.1.178",
-  "$schema": "https://unpkg.com/@plasmicapp/cli@0.1.178/dist/plasmic.schema.json"
+  "cliVersion": "0.1.180",
+  "$schema": "https://unpkg.com/@plasmicapp/cli@0.1.180/dist/plasmic.schema.json"
 }
