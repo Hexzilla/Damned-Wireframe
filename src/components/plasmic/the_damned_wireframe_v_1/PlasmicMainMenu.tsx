@@ -55,6 +55,7 @@ export const PlasmicMainMenu__ArgProps = new Array<ArgPropType>();
 
 export type PlasmicMainMenu__OverridesType = {
   root?: p.Flex<"div">;
+  loreButton?: p.Flex<typeof Button>;
   nftButton?: p.Flex<"div">;
   qty?: p.Flex<"div">;
   nftButton2?: p.Flex<"div">;
@@ -119,7 +120,9 @@ function PlasmicMainMenu__RenderFunc(props: {
       </Button>
 
       <Button
-        className={classNames("__wab_instance", sty.button__pU9CH)}
+        data-plasmic-name={"loreButton"}
+        data-plasmic-override={overrides.loreButton}
+        className={classNames("__wab_instance", sty.loreButton)}
         size={
           hasVariant(globalVariants, "screen", "mobileOnly")
             ? ("compact" as const)
@@ -512,6 +515,7 @@ function PlasmicMainMenu__RenderFunc(props: {
 const PlasmicDescendants = {
   root: [
     "root",
+    "loreButton",
     "nftButton",
     "qty",
     "nftButton2",
@@ -529,6 +533,7 @@ const PlasmicDescendants = {
     "nftButton8",
     "qty8"
   ],
+  loreButton: ["loreButton"],
   nftButton: ["nftButton", "qty"],
   qty: ["qty"],
   nftButton2: ["nftButton2", "qty2"],
@@ -551,6 +556,7 @@ type DescendantsType<T extends NodeNameType> =
   typeof PlasmicDescendants[T][number];
 type NodeDefaultElementType = {
   root: "div";
+  loreButton: typeof Button;
   nftButton: "div";
   qty: "div";
   nftButton2: "div";
@@ -626,6 +632,7 @@ export const PlasmicMainMenu = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
+    loreButton: makeNodeComponent("loreButton"),
     nftButton: makeNodeComponent("nftButton"),
     qty: makeNodeComponent("qty"),
     nftButton2: makeNodeComponent("nftButton2"),

@@ -143,6 +143,26 @@
           "id": "odUkh9DYHA",
           "name": "ProfileSvgrepoComsvgIcon",
           "moduleFilePath": "plasmic/the_damned_wireframe_v_1/icons/PlasmicIcon__ProfileSvgrepoComsvg.tsx"
+        },
+        {
+          "id": "tNgMEKChU2h",
+          "name": "Icon2Icon",
+          "moduleFilePath": "plasmic/the_damned_wireframe_v_1/icons/PlasmicIcon__Icon2.tsx"
+        },
+        {
+          "id": "LtVGMxllJxP",
+          "name": "Icon3Icon",
+          "moduleFilePath": "plasmic/the_damned_wireframe_v_1/icons/PlasmicIcon__Icon3.tsx"
+        },
+        {
+          "id": "ggakMPa4rUs",
+          "name": "Icon14Icon",
+          "moduleFilePath": "plasmic/the_damned_wireframe_v_1/icons/PlasmicIcon__Icon14.tsx"
+        },
+        {
+          "id": "MKtC6T2ChXX",
+          "name": "ArrowRightsvgIcon",
+          "moduleFilePath": "plasmic/the_damned_wireframe_v_1/icons/PlasmicIcon__ArrowRightsvg.tsx"
         }
       ],
       "images": [
@@ -160,6 +180,21 @@
           "id": "zz4X42Fn_",
           "name": "audio.png 2",
           "filePath": "plasmic/the_damned_wireframe_v_1/images/audiopng2.png"
+        },
+        {
+          "id": "YVC1IxiaDSO",
+          "name": "image 2",
+          "filePath": "plasmic/the_damned_wireframe_v_1/images/image2.jpeg"
+        },
+        {
+          "id": "dRsY0p5OQJR",
+          "name": "image 3",
+          "filePath": "plasmic/the_damned_wireframe_v_1/images/image3.jpeg"
+        },
+        {
+          "id": "r7ahpyQwPe5",
+          "name": "image 4",
+          "filePath": "plasmic/the_damned_wireframe_v_1/images/image4.jpeg"
         }
       ],
       "indirect": false,

@@ -107,305 +107,315 @@ function PlasmicHomepage__RenderFunc(props: {
       {}
       {}
 
-      <p.Stack
-        as={"div"}
-        data-plasmic-name={"root"}
-        data-plasmic-override={overrides.root}
-        data-plasmic-root={true}
-        data-plasmic-for-node={forNode}
-        hasGap={true}
-        className={classNames(
-          projectcss.all,
-          projectcss.root_reset,
-          projectcss.plasmic_default_styles,
-          projectcss.plasmic_mixins,
-          sty.root,
-          { [sty.rootsynced]: hasVariant(variants, "synced", "synced") }
-        )}
-      >
-        <div
-          data-plasmic-name={"header"}
-          data-plasmic-override={overrides.header}
-          className={classNames(projectcss.all, sty.header)}
+      <div className={projectcss.plasmic_page_wrapper}>
+        <p.Stack
+          as={"div"}
+          data-plasmic-name={"root"}
+          data-plasmic-override={overrides.root}
+          data-plasmic-root={true}
+          data-plasmic-for-node={forNode}
+          hasGap={true}
+          className={classNames(
+            projectcss.all,
+            projectcss.root_reset,
+            projectcss.plasmic_default_styles,
+            projectcss.plasmic_mixins,
+            sty.root,
+            { [sty.rootsynced]: hasVariant(variants, "synced", "synced") }
+          )}
         >
-          <MainMenu
-            data-plasmic-name={"mainMenu"}
-            data-plasmic-override={overrides.mainMenu}
-            className={classNames("__wab_instance", sty.mainMenu, {
-              [sty.mainMenusynced]: hasVariant(variants, "synced", "synced")
-            })}
-          />
-
           <div
-            data-plasmic-name={"spacer"}
-            data-plasmic-override={overrides.spacer}
-            className={classNames(projectcss.all, sty.spacer, {
-              [sty.spacersynced]: hasVariant(variants, "synced", "synced")
-            })}
-          />
+            data-plasmic-name={"header"}
+            data-plasmic-override={overrides.header}
+            className={classNames(projectcss.all, sty.header)}
+          >
+            <MainMenu
+              data-plasmic-name={"mainMenu"}
+              data-plasmic-override={overrides.mainMenu}
+              className={classNames("__wab_instance", sty.mainMenu, {
+                [sty.mainMenusynced]: hasVariant(variants, "synced", "synced")
+              })}
+            />
 
-          {(
-            hasVariant(globalVariants, "screen", "mobileOnly") ? true : true
-          ) ? (
             <div
-              data-plasmic-name={"profile"}
-              data-plasmic-override={overrides.profile}
-              className={classNames(projectcss.all, sty.profile)}
-            >
-              <div className={classNames(projectcss.all, sty.freeBox__epflS)}>
-                <div
-                  data-plasmic-name={"testing"}
-                  data-plasmic-override={overrides.testing}
-                  className={classNames(projectcss.all, sty.testing)}
-                >
+              data-plasmic-name={"spacer"}
+              data-plasmic-override={overrides.spacer}
+              className={classNames(projectcss.all, sty.spacer, {
+                [sty.spacersynced]: hasVariant(variants, "synced", "synced")
+              })}
+            />
+
+            {(
+              hasVariant(globalVariants, "screen", "mobileOnly") ? true : true
+            ) ? (
+              <div
+                data-plasmic-name={"profile"}
+                data-plasmic-override={overrides.profile}
+                className={classNames(projectcss.all, sty.profile)}
+              >
+                <div className={classNames(projectcss.all, sty.freeBox__epflS)}>
                   <div
-                    data-plasmic-name={"testingFunctions"}
-                    data-plasmic-override={overrides.testingFunctions}
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.testingFunctions
-                    )}
-                  >
-                    {"Testing functions"}
-                  </div>
-
-                  <Button
-                    className={classNames("__wab_instance", sty.button__hnVyc)}
-                    size={"compact" as const}
-                  >
-                    {"Mint Random"}
-                  </Button>
-                </div>
-
-                <div
-                  className={classNames(projectcss.all, sty.freeBox___5HOlO)}
-                >
-                  {(
-                    hasVariant(globalVariants, "screen", "mobileOnly")
-                      ? true
-                      : true
-                  ) ? (
-                    <Button
-                      className={classNames(
-                        "__wab_instance",
-                        sty.button__o0CYd,
-                        {
-                          [sty.buttonsynced__o0CYdOtsOf]: hasVariant(
-                            variants,
-                            "synced",
-                            "synced"
-                          )
-                        }
-                      )}
-                      isDisabled={
-                        hasVariant(globalVariants, "screen", "mobileOnly")
-                          ? true
-                          : undefined
-                      }
-                    >
-                      {hasVariant(variants, "synced", "synced")
-                        ? "Unsync"
-                        : "Unsync"}
-                    </Button>
-                  ) : null}
-
-                  <ProfileSvgrepoComsvgIcon
-                    data-plasmic-name={"svg"}
-                    data-plasmic-override={overrides.svg}
-                    className={classNames(projectcss.all, sty.svg)}
-                    role={"img"}
-                  />
-
-                  <a
-                    data-plasmic-name={"link"}
-                    data-plasmic-override={overrides.link}
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.a,
-                      sty.link
-                    )}
+                    data-plasmic-name={"testing"}
+                    data-plasmic-override={overrides.testing}
+                    className={classNames(projectcss.all, sty.testing)}
                   >
                     <div
+                      data-plasmic-name={"testingFunctions"}
+                      data-plasmic-override={overrides.testingFunctions}
                       className={classNames(
                         projectcss.all,
                         projectcss.__wab_text,
-                        sty.text__mGgux
+                        sty.testingFunctions
                       )}
                     >
-                      {"Edit Profile"}
+                      {"Testing functions"}
                     </div>
-                  </a>
+
+                    <Button
+                      className={classNames(
+                        "__wab_instance",
+                        sty.button__hnVyc
+                      )}
+                      size={"compact" as const}
+                    >
+                      {"Mint Random"}
+                    </Button>
+                  </div>
 
                   <div
-                    className={classNames(projectcss.all, sty.freeBox___8Wyow)}
-                  />
+                    className={classNames(projectcss.all, sty.freeBox___5HOlO)}
+                  >
+                    {(
+                      hasVariant(globalVariants, "screen", "mobileOnly")
+                        ? true
+                        : true
+                    ) ? (
+                      <Button
+                        className={classNames(
+                          "__wab_instance",
+                          sty.button__o0CYd,
+                          {
+                            [sty.buttonsynced__o0CYdOtsOf]: hasVariant(
+                              variants,
+                              "synced",
+                              "synced"
+                            )
+                          }
+                        )}
+                        isDisabled={
+                          hasVariant(globalVariants, "screen", "mobileOnly")
+                            ? true
+                            : undefined
+                        }
+                      >
+                        {hasVariant(variants, "synced", "synced")
+                          ? "Unsync"
+                          : "Unsync"}
+                      </Button>
+                    ) : null}
+
+                    <ProfileSvgrepoComsvgIcon
+                      data-plasmic-name={"svg"}
+                      data-plasmic-override={overrides.svg}
+                      className={classNames(projectcss.all, sty.svg)}
+                      role={"img"}
+                    />
+
+                    <a
+                      data-plasmic-name={"link"}
+                      data-plasmic-override={overrides.link}
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.a,
+                        sty.link
+                      )}
+                    >
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__mGgux
+                        )}
+                      >
+                        {"Edit Profile"}
+                      </div>
+                    </a>
+
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        sty.freeBox___8Wyow
+                      )}
+                    />
+                  </div>
                 </div>
               </div>
-            </div>
+            ) : null}
+          </div>
+
+          {true ? (
+            <Reveal
+              cascade={false}
+              className={classNames("__wab_instance", sty.reveal__ufKEa)}
+              delay={1 as const}
+              direction={"up" as const}
+              effect={"zoom" as const}
+              reverse={false}
+              triggerOnce={false}
+            >
+              <p.PlasmicImg
+                alt={""}
+                className={classNames(sty.img__no8Ea)}
+                displayHeight={"100%" as const}
+                displayMaxHeight={"1073px" as const}
+                displayMaxWidth={"100%" as const}
+                displayMinHeight={"216px" as const}
+                displayMinWidth={"0" as const}
+                displayWidth={"100%" as const}
+                loading={"lazy" as const}
+                src={{
+                  src: imageNjSfrrcy2,
+                  fullWidth: 687,
+                  fullHeight: 1031,
+                  aspectRatio: undefined
+                }}
+              />
+            </Reveal>
           ) : null}
-        </div>
-
-        {true ? (
-          <Reveal
-            cascade={false}
-            className={classNames("__wab_instance", sty.reveal__ufKEa)}
-            delay={1 as const}
-            direction={"up" as const}
-            effect={"zoom" as const}
-            reverse={false}
-            triggerOnce={false}
-          >
-            <p.PlasmicImg
-              alt={""}
-              className={classNames(sty.img__no8Ea)}
-              displayHeight={"100%" as const}
-              displayMaxHeight={"1073px" as const}
-              displayMaxWidth={"100%" as const}
-              displayMinHeight={"216px" as const}
-              displayMinWidth={"0" as const}
-              displayWidth={"100%" as const}
-              loading={"lazy" as const}
-              src={{
-                src: imageNjSfrrcy2,
-                fullWidth: 687,
-                fullHeight: 1031,
-                aspectRatio: undefined
-              }}
-            />
-          </Reveal>
-        ) : null}
-        {true ? (
-          <Reveal
-            cascade={false}
-            className={classNames("__wab_instance", sty.reveal___6R2Cn)}
-            delay={1 as const}
-            direction={"up" as const}
-            effect={"zoom" as const}
-            reverse={false}
-            triggerOnce={false}
-          >
-            <p.PlasmicImg
-              alt={""}
-              className={classNames(sty.img__v3QdF)}
-              displayHeight={"100%" as const}
-              displayMaxHeight={"1073px" as const}
-              displayMaxWidth={"100%" as const}
-              displayMinHeight={"216px" as const}
-              displayMinWidth={"0" as const}
-              displayWidth={"100%" as const}
-              loading={"lazy" as const}
-              src={{
-                src: imageNjSfrrcy2,
-                fullWidth: 687,
-                fullHeight: 1031,
-                aspectRatio: undefined
-              }}
-            />
-          </Reveal>
-        ) : null}
-
-        <div
-          data-plasmic-name={"mainContent"}
-          data-plasmic-override={overrides.mainContent}
-          className={classNames(projectcss.all, sty.mainContent, {
-            [sty.mainContentsynced]: hasVariant(variants, "synced", "synced")
-          })}
-        >
-          <h1
-            className={classNames(
-              projectcss.all,
-              projectcss.h1,
-              projectcss.__wab_text,
-              sty.h1__nbjLf,
-              {
-                [sty.h1synced__nbjLfOtsOf]: hasVariant(
-                  variants,
-                  "synced",
-                  "synced"
-                )
-              }
-            )}
-          >
-            {"Main Content"}
-          </h1>
+          {true ? (
+            <Reveal
+              cascade={false}
+              className={classNames("__wab_instance", sty.reveal___6R2Cn)}
+              delay={1 as const}
+              direction={"up" as const}
+              effect={"zoom" as const}
+              reverse={false}
+              triggerOnce={false}
+            >
+              <p.PlasmicImg
+                alt={""}
+                className={classNames(sty.img__v3QdF)}
+                displayHeight={"100%" as const}
+                displayMaxHeight={"1073px" as const}
+                displayMaxWidth={"100%" as const}
+                displayMinHeight={"216px" as const}
+                displayMinWidth={"0" as const}
+                displayWidth={"100%" as const}
+                loading={"lazy" as const}
+                src={{
+                  src: imageNjSfrrcy2,
+                  fullWidth: 687,
+                  fullHeight: 1031,
+                  aspectRatio: undefined
+                }}
+              />
+            </Reveal>
+          ) : null}
 
           <div
-            data-plasmic-name={"storyPoem"}
-            data-plasmic-override={overrides.storyPoem}
-            className={classNames(projectcss.all, sty.storyPoem)}
+            data-plasmic-name={"mainContent"}
+            data-plasmic-override={overrides.mainContent}
+            className={classNames(projectcss.all, sty.mainContent, {
+              [sty.mainContentsynced]: hasVariant(variants, "synced", "synced")
+            })}
           >
             <h1
               className={classNames(
                 projectcss.all,
                 projectcss.h1,
                 projectcss.__wab_text,
-                sty.h1__qpyG
+                sty.h1__nbjLf,
+                {
+                  [sty.h1synced__nbjLfOtsOf]: hasVariant(
+                    variants,
+                    "synced",
+                    "synced"
+                  )
+                }
               )}
             >
-              {"Story"}
-            </h1>
-
-            <h1
-              className={classNames(
-                projectcss.all,
-                projectcss.h1,
-                projectcss.__wab_text,
-                sty.h1__ySjDx
-              )}
-            >
-              {"Limbo"}
+              {"Main Content"}
             </h1>
 
             <div
-              className={classNames(
-                projectcss.all,
-                projectcss.__wab_text,
-                sty.text__jdBfR
-              )}
+              data-plasmic-name={"storyPoem"}
+              data-plasmic-override={overrides.storyPoem}
+              className={classNames(projectcss.all, sty.storyPoem)}
             >
-              {
-                "Lost souls wander through the castle of LIMBO, through the cold cobble stones that built up this fortress of woe and desolation, infinite abyss. We must find our escape through corridors of endless woe. But I never lost hope that one day I could be freed from this eternal damnation of apathy and that we would find an escape to enlightenment. Riddles lead us to a secret door, which opens out onto a beautiful blossoming garden."
-              }
-            </div>
-
-            <p.PlasmicImg
-              alt={""}
-              className={classNames(sty.img__qu30I)}
-              displayHeight={"auto" as const}
-              displayMaxHeight={"none" as const}
-              displayMaxWidth={"100%" as const}
-              displayMinHeight={"0" as const}
-              displayMinWidth={"0" as const}
-              displayWidth={"auto" as const}
-              loading={"lazy" as const}
-              src={{
-                src: audiopng2Zz4X42Fn,
-                fullWidth: 534,
-                fullHeight: 108,
-                aspectRatio: undefined
-              }}
-            />
-
-            <div className={classNames(projectcss.all, sty.freeBox__gloM)}>
-              <Button
-                className={classNames("__wab_instance", sty.button__lzfbK)}
-                isDisabled={true}
+              <h1
+                className={classNames(
+                  projectcss.all,
+                  projectcss.h1,
+                  projectcss.__wab_text,
+                  sty.h1__qpyG
+                )}
               >
                 {"Story"}
-              </Button>
+              </h1>
 
-              <div className={classNames(projectcss.all, sty.freeBox__xDn1)} />
-
-              <Button
-                className={classNames("__wab_instance", sty.button__frBz6)}
+              <h1
+                className={classNames(
+                  projectcss.all,
+                  projectcss.h1,
+                  projectcss.__wab_text,
+                  sty.h1__ySjDx
+                )}
               >
-                {"Poem"}
-              </Button>
+                {"Limbo"}
+              </h1>
+
+              <div
+                className={classNames(
+                  projectcss.all,
+                  projectcss.__wab_text,
+                  sty.text__jdBfR
+                )}
+              >
+                {
+                  "Lost souls wander through the castle of LIMBO, through the cold cobble stones that built up this fortress of woe and desolation, infinite abyss. We must find our escape through corridors of endless woe. But I never lost hope that one day I could be freed from this eternal damnation of apathy and that we would find an escape to enlightenment. Riddles lead us to a secret door, which opens out onto a beautiful blossoming garden."
+                }
+              </div>
+
+              <p.PlasmicImg
+                alt={""}
+                className={classNames(sty.img__qu30I)}
+                displayHeight={"auto" as const}
+                displayMaxHeight={"none" as const}
+                displayMaxWidth={"100%" as const}
+                displayMinHeight={"0" as const}
+                displayMinWidth={"0" as const}
+                displayWidth={"auto" as const}
+                loading={"lazy" as const}
+                src={{
+                  src: audiopng2Zz4X42Fn,
+                  fullWidth: 534,
+                  fullHeight: 108,
+                  aspectRatio: undefined
+                }}
+              />
+
+              <div className={classNames(projectcss.all, sty.freeBox__gloM)}>
+                <Button
+                  className={classNames("__wab_instance", sty.button__lzfbK)}
+                  isDisabled={true}
+                >
+                  {"Story"}
+                </Button>
+
+                <div
+                  className={classNames(projectcss.all, sty.freeBox__xDn1)}
+                />
+
+                <Button
+                  className={classNames("__wab_instance", sty.button__frBz6)}
+                >
+                  {"Poem"}
+                </Button>
+              </div>
             </div>
           </div>
-        </div>
-      </p.Stack>
+        </p.Stack>
+      </div>
     </React.Fragment>
   ) as React.ReactElement | null;
 }
