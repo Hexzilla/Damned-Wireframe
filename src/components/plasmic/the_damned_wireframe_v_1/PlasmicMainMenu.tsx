@@ -451,6 +451,19 @@ function PlasmicMainMenu__RenderFunc(props: {
             : ("compact" as const)
         }
       >
+        {"Void"}
+      </Button>
+
+      <Button
+        className={classNames("__wab_instance", sty.button__vKwH)}
+        size={
+          hasVariant(globalVariants, "screen", "mobileOnly")
+            ? ("compact" as const)
+            : hasVariant(globalVariants, "screen", "smallScreen")
+            ? ("minimal" as const)
+            : ("compact" as const)
+        }
+      >
         {"Throne"}
       </Button>
 

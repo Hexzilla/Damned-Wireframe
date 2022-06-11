@@ -620,6 +620,38 @@
   width: 1em;
   height: 1em;
 }
+.button__vKwH:global(.__wab_instance) {
+  max-width: 100%;
+  position: relative;
+  width: 100%;
+  left: auto;
+  top: auto;
+  min-width: 0;
+}
+@media (max-width: 1000px) {
+  .button__vKwH:global(.__wab_instance) {
+    left: auto;
+    top: auto;
+  }
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .button__vKwH:global(.__wab_instance) {
+    left: auto;
+    top: auto;
+  }
+}
+.svg__qeyPn {
+  position: relative;
+  object-fit: cover;
+  width: 1em;
+  height: 1em;
+}
+.svg__gf2VA {
+  position: relative;
+  object-fit: cover;
+  width: 1em;
+  height: 1em;
+}
 .button__aC2KH:global(.__wab_instance) {
   max-width: 100%;
   position: relative;

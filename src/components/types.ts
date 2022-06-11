@@ -1,5 +1,5 @@
 export interface Settings {
-  logoOpacity: number;
+  storyOpacity: number;
   leavesScale: number;
   overlayOpacity: number;
   lineTranslate: number;

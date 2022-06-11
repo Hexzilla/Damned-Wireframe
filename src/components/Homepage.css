@@ -104,3 +104,12 @@ div.dik-banner-2d .scroll-line {
   transition: opacity .25s ease-in-out;
   transition: all .25s ease-out;
 }
+
+.rest-above {
+  position: relative;
+  z-index: 100;
+}
+
+img.nft {
+  width: 100%;
+}
