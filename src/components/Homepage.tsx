@@ -38,7 +38,6 @@ function Homepage_(props: HomepageProps, ref: HTMLElementRefOf<"div">) {
 
   useEffect(() => {
     const h = height / 1.5;
-    console.log('~~~~~~~~~~~', scroll, h, Math.max(1 - scroll / h, 0))
     setSettings({
       storyOpacity: scroll > 800 ? Math.max(1 - (scroll - h) / h, 0) : 1,
       leavesScale: Math.min(scroll / h + 1, 1.75),
