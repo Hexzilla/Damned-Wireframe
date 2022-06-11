@@ -17,16 +17,22 @@ function MainMenu_(props: MainMenuProps, ref: HTMLElementRefOf<"div">) {
       });
     }
   }
-  const handleLoreButton = (): void => {
-    console.log("handleLoreButton");
-    scrollTo("Lore");
-  };
 
   return (
     <PlasmicMainMenu
       root={{ ref }}
       {...props}
-      loreButton={{ onClick: handleLoreButton }}
+      loreButton={{ onClick: () => scrollTo("Lore") }}
+      roadmapButton={{ onClick: () => scrollTo("Roadmap") }}
+      limboButton={{ onClick: () => scrollTo("Limbo") }}
+      lustButton={{ onClick: () => scrollTo("Lust") }}
+      gluttonyButton={{ onClick: () => scrollTo("Gluttony") }}
+      greedButton={{ onClick: () => scrollTo("Greed") }}
+      angerButton={{ onClick: () => scrollTo("Anger") }}
+      heresyButton={{ onClick: () => scrollTo("Heresy") }}
+      violenceButton={{ onClick: () => scrollTo("Violence") }}
+      fraudButton={{ onClick: () => scrollTo("Fraud") }}
+      teamButton={{ onClick: () => scrollTo("Team") }}
     />
   );
 }

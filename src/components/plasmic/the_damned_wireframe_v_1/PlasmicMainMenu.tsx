@@ -56,22 +56,30 @@ export const PlasmicMainMenu__ArgProps = new Array<ArgPropType>();
 export type PlasmicMainMenu__OverridesType = {
   root?: p.Flex<"div">;
   loreButton?: p.Flex<typeof Button>;
-  nftButton?: p.Flex<"div">;
+  roadmapButton?: p.Flex<typeof Button>;
+  contestsButton?: p.Flex<typeof Button>;
+  eventsButton?: p.Flex<typeof Button>;
+  limboButton?: p.Flex<"div">;
   qty?: p.Flex<"div">;
-  nftButton2?: p.Flex<"div">;
+  lustButton?: p.Flex<"div">;
   qty2?: p.Flex<"div">;
-  nftButton3?: p.Flex<"div">;
+  gluttonyButton?: p.Flex<"div">;
   qty3?: p.Flex<"div">;
-  nftButton4?: p.Flex<"div">;
+  greedButton?: p.Flex<"div">;
   qty4?: p.Flex<"div">;
-  nftButton5?: p.Flex<"div">;
+  angerButton?: p.Flex<"div">;
   qty5?: p.Flex<"div">;
-  nftButton6?: p.Flex<"div">;
+  heresyButton?: p.Flex<"div">;
   qty6?: p.Flex<"div">;
-  nftButton7?: p.Flex<"div">;
+  violenceButton?: p.Flex<"div">;
   qty7?: p.Flex<"div">;
-  nftButton8?: p.Flex<"div">;
+  fraudButton?: p.Flex<"div">;
   qty8?: p.Flex<"div">;
+  voidButton?: p.Flex<typeof Button>;
+  throneButton?: p.Flex<typeof Button>;
+  faqButton?: p.Flex<typeof Button>;
+  teamButton?: p.Flex<typeof Button>;
+  contactButton?: p.Flex<typeof Button>;
 };
 
 export interface DefaultMainMenuProps {
@@ -135,7 +143,9 @@ function PlasmicMainMenu__RenderFunc(props: {
       </Button>
 
       <Button
-        className={classNames("__wab_instance", sty.button__uoM5)}
+        data-plasmic-name={"roadmapButton"}
+        data-plasmic-override={overrides.roadmapButton}
+        className={classNames("__wab_instance", sty.roadmapButton)}
         size={
           hasVariant(globalVariants, "screen", "mobileOnly")
             ? ("compact" as const)
@@ -148,7 +158,9 @@ function PlasmicMainMenu__RenderFunc(props: {
       </Button>
 
       <Button
-        className={classNames("__wab_instance", sty.button__nAEt)}
+        data-plasmic-name={"contestsButton"}
+        data-plasmic-override={overrides.contestsButton}
+        className={classNames("__wab_instance", sty.contestsButton)}
         size={
           hasVariant(globalVariants, "screen", "mobileOnly")
             ? ("compact" as const)
@@ -161,7 +173,9 @@ function PlasmicMainMenu__RenderFunc(props: {
       </Button>
 
       <Button
-        className={classNames("__wab_instance", sty.button__qLpTt)}
+        data-plasmic-name={"eventsButton"}
+        data-plasmic-override={overrides.eventsButton}
+        className={classNames("__wab_instance", sty.eventsButton)}
         size={
           hasVariant(globalVariants, "screen", "mobileOnly")
             ? ("compact" as const)
@@ -175,9 +189,9 @@ function PlasmicMainMenu__RenderFunc(props: {
 
       {(hasVariant(globalVariants, "screen", "mobileOnly") ? true : true) ? (
         <div
-          data-plasmic-name={"nftButton"}
-          data-plasmic-override={overrides.nftButton}
-          className={classNames(projectcss.all, sty.nftButton)}
+          data-plasmic-name={"limboButton"}
+          data-plasmic-override={overrides.limboButton}
+          className={classNames(projectcss.all, sty.limboButton)}
         >
           <Button
             className={classNames("__wab_instance", sty.button___0Ss0)}
@@ -207,9 +221,9 @@ function PlasmicMainMenu__RenderFunc(props: {
       ) : null}
       {(hasVariant(globalVariants, "screen", "mobileOnly") ? true : true) ? (
         <div
-          data-plasmic-name={"nftButton2"}
-          data-plasmic-override={overrides.nftButton2}
-          className={classNames(projectcss.all, sty.nftButton2)}
+          data-plasmic-name={"lustButton"}
+          data-plasmic-override={overrides.lustButton}
+          className={classNames(projectcss.all, sty.lustButton)}
         >
           {(
             hasVariant(globalVariants, "screen", "mobileOnly") ? true : true
@@ -241,9 +255,9 @@ function PlasmicMainMenu__RenderFunc(props: {
       ) : null}
       {(hasVariant(globalVariants, "screen", "mobileOnly") ? true : true) ? (
         <div
-          data-plasmic-name={"nftButton3"}
-          data-plasmic-override={overrides.nftButton3}
-          className={classNames(projectcss.all, sty.nftButton3)}
+          data-plasmic-name={"gluttonyButton"}
+          data-plasmic-override={overrides.gluttonyButton}
+          className={classNames(projectcss.all, sty.gluttonyButton)}
         >
           {(
             hasVariant(globalVariants, "screen", "mobileOnly") ? true : true
@@ -275,9 +289,9 @@ function PlasmicMainMenu__RenderFunc(props: {
       ) : null}
       {(hasVariant(globalVariants, "screen", "mobileOnly") ? true : true) ? (
         <div
-          data-plasmic-name={"nftButton4"}
-          data-plasmic-override={overrides.nftButton4}
-          className={classNames(projectcss.all, sty.nftButton4)}
+          data-plasmic-name={"greedButton"}
+          data-plasmic-override={overrides.greedButton}
+          className={classNames(projectcss.all, sty.greedButton)}
         >
           {(
             hasVariant(globalVariants, "screen", "mobileOnly") ? true : true
@@ -309,9 +323,9 @@ function PlasmicMainMenu__RenderFunc(props: {
       ) : null}
       {(hasVariant(globalVariants, "screen", "mobileOnly") ? true : true) ? (
         <div
-          data-plasmic-name={"nftButton5"}
-          data-plasmic-override={overrides.nftButton5}
-          className={classNames(projectcss.all, sty.nftButton5)}
+          data-plasmic-name={"angerButton"}
+          data-plasmic-override={overrides.angerButton}
+          className={classNames(projectcss.all, sty.angerButton)}
         >
           {(
             hasVariant(globalVariants, "screen", "mobileOnly") ? true : true
@@ -343,9 +357,9 @@ function PlasmicMainMenu__RenderFunc(props: {
       ) : null}
       {(hasVariant(globalVariants, "screen", "mobileOnly") ? true : true) ? (
         <div
-          data-plasmic-name={"nftButton6"}
-          data-plasmic-override={overrides.nftButton6}
-          className={classNames(projectcss.all, sty.nftButton6)}
+          data-plasmic-name={"heresyButton"}
+          data-plasmic-override={overrides.heresyButton}
+          className={classNames(projectcss.all, sty.heresyButton)}
         >
           {(
             hasVariant(globalVariants, "screen", "mobileOnly") ? true : true
@@ -377,9 +391,9 @@ function PlasmicMainMenu__RenderFunc(props: {
       ) : null}
       {(hasVariant(globalVariants, "screen", "mobileOnly") ? true : true) ? (
         <div
-          data-plasmic-name={"nftButton7"}
-          data-plasmic-override={overrides.nftButton7}
-          className={classNames(projectcss.all, sty.nftButton7)}
+          data-plasmic-name={"violenceButton"}
+          data-plasmic-override={overrides.violenceButton}
+          className={classNames(projectcss.all, sty.violenceButton)}
         >
           {(
             hasVariant(globalVariants, "screen", "mobileOnly") ? true : true
@@ -411,9 +425,9 @@ function PlasmicMainMenu__RenderFunc(props: {
       ) : null}
       {(hasVariant(globalVariants, "screen", "mobileOnly") ? true : true) ? (
         <div
-          data-plasmic-name={"nftButton8"}
-          data-plasmic-override={overrides.nftButton8}
-          className={classNames(projectcss.all, sty.nftButton8)}
+          data-plasmic-name={"fraudButton"}
+          data-plasmic-override={overrides.fraudButton}
+          className={classNames(projectcss.all, sty.fraudButton)}
         >
           {(
             hasVariant(globalVariants, "screen", "mobileOnly") ? true : true
@@ -445,7 +459,9 @@ function PlasmicMainMenu__RenderFunc(props: {
       ) : null}
 
       <Button
-        className={classNames("__wab_instance", sty.button__dgUUo)}
+        data-plasmic-name={"voidButton"}
+        data-plasmic-override={overrides.voidButton}
+        className={classNames("__wab_instance", sty.voidButton)}
         size={
           hasVariant(globalVariants, "screen", "mobileOnly")
             ? ("compact" as const)
@@ -458,7 +474,9 @@ function PlasmicMainMenu__RenderFunc(props: {
       </Button>
 
       <Button
-        className={classNames("__wab_instance", sty.button__vKwH)}
+        data-plasmic-name={"throneButton"}
+        data-plasmic-override={overrides.throneButton}
+        className={classNames("__wab_instance", sty.throneButton)}
         size={
           hasVariant(globalVariants, "screen", "mobileOnly")
             ? ("compact" as const)
@@ -471,7 +489,9 @@ function PlasmicMainMenu__RenderFunc(props: {
       </Button>
 
       <Button
-        className={classNames("__wab_instance", sty.button__aC2KH)}
+        data-plasmic-name={"faqButton"}
+        data-plasmic-override={overrides.faqButton}
+        className={classNames("__wab_instance", sty.faqButton)}
         size={
           hasVariant(globalVariants, "screen", "mobileOnly")
             ? ("compact" as const)
@@ -484,7 +504,9 @@ function PlasmicMainMenu__RenderFunc(props: {
       </Button>
 
       <Button
-        className={classNames("__wab_instance", sty.button__iGvvo)}
+        data-plasmic-name={"teamButton"}
+        data-plasmic-override={overrides.teamButton}
+        className={classNames("__wab_instance", sty.teamButton)}
         size={
           hasVariant(globalVariants, "screen", "mobileOnly")
             ? ("compact" as const)
@@ -497,7 +519,9 @@ function PlasmicMainMenu__RenderFunc(props: {
       </Button>
 
       <Button
-        className={classNames("__wab_instance", sty.button__g6Zp)}
+        data-plasmic-name={"contactButton"}
+        data-plasmic-override={overrides.contactButton}
+        className={classNames("__wab_instance", sty.contactButton)}
         size={
           hasVariant(globalVariants, "screen", "mobileOnly")
             ? ("compact" as const)
@@ -516,40 +540,56 @@ const PlasmicDescendants = {
   root: [
     "root",
     "loreButton",
-    "nftButton",
+    "roadmapButton",
+    "contestsButton",
+    "eventsButton",
+    "limboButton",
     "qty",
-    "nftButton2",
+    "lustButton",
     "qty2",
-    "nftButton3",
+    "gluttonyButton",
     "qty3",
-    "nftButton4",
+    "greedButton",
     "qty4",
-    "nftButton5",
+    "angerButton",
     "qty5",
-    "nftButton6",
+    "heresyButton",
     "qty6",
-    "nftButton7",
+    "violenceButton",
     "qty7",
-    "nftButton8",
-    "qty8"
+    "fraudButton",
+    "qty8",
+    "voidButton",
+    "throneButton",
+    "faqButton",
+    "teamButton",
+    "contactButton"
   ],
   loreButton: ["loreButton"],
-  nftButton: ["nftButton", "qty"],
+  roadmapButton: ["roadmapButton"],
+  contestsButton: ["contestsButton"],
+  eventsButton: ["eventsButton"],
+  limboButton: ["limboButton", "qty"],
   qty: ["qty"],
-  nftButton2: ["nftButton2", "qty2"],
+  lustButton: ["lustButton", "qty2"],
   qty2: ["qty2"],
-  nftButton3: ["nftButton3", "qty3"],
+  gluttonyButton: ["gluttonyButton", "qty3"],
   qty3: ["qty3"],
-  nftButton4: ["nftButton4", "qty4"],
+  greedButton: ["greedButton", "qty4"],
   qty4: ["qty4"],
-  nftButton5: ["nftButton5", "qty5"],
+  angerButton: ["angerButton", "qty5"],
   qty5: ["qty5"],
-  nftButton6: ["nftButton6", "qty6"],
+  heresyButton: ["heresyButton", "qty6"],
   qty6: ["qty6"],
-  nftButton7: ["nftButton7", "qty7"],
+  violenceButton: ["violenceButton", "qty7"],
   qty7: ["qty7"],
-  nftButton8: ["nftButton8", "qty8"],
-  qty8: ["qty8"]
+  fraudButton: ["fraudButton", "qty8"],
+  qty8: ["qty8"],
+  voidButton: ["voidButton"],
+  throneButton: ["throneButton"],
+  faqButton: ["faqButton"],
+  teamButton: ["teamButton"],
+  contactButton: ["contactButton"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
@@ -557,22 +597,30 @@ type DescendantsType<T extends NodeNameType> =
 type NodeDefaultElementType = {
   root: "div";
   loreButton: typeof Button;
-  nftButton: "div";
+  roadmapButton: typeof Button;
+  contestsButton: typeof Button;
+  eventsButton: typeof Button;
+  limboButton: "div";
   qty: "div";
-  nftButton2: "div";
+  lustButton: "div";
   qty2: "div";
-  nftButton3: "div";
+  gluttonyButton: "div";
   qty3: "div";
-  nftButton4: "div";
+  greedButton: "div";
   qty4: "div";
-  nftButton5: "div";
+  angerButton: "div";
   qty5: "div";
-  nftButton6: "div";
+  heresyButton: "div";
   qty6: "div";
-  nftButton7: "div";
+  violenceButton: "div";
   qty7: "div";
-  nftButton8: "div";
+  fraudButton: "div";
   qty8: "div";
+  voidButton: typeof Button;
+  throneButton: typeof Button;
+  faqButton: typeof Button;
+  teamButton: typeof Button;
+  contactButton: typeof Button;
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -633,22 +681,30 @@ export const PlasmicMainMenu = Object.assign(
   {
     // Helper components rendering sub-elements
     loreButton: makeNodeComponent("loreButton"),
-    nftButton: makeNodeComponent("nftButton"),
+    roadmapButton: makeNodeComponent("roadmapButton"),
+    contestsButton: makeNodeComponent("contestsButton"),
+    eventsButton: makeNodeComponent("eventsButton"),
+    limboButton: makeNodeComponent("limboButton"),
     qty: makeNodeComponent("qty"),
-    nftButton2: makeNodeComponent("nftButton2"),
+    lustButton: makeNodeComponent("lustButton"),
     qty2: makeNodeComponent("qty2"),
-    nftButton3: makeNodeComponent("nftButton3"),
+    gluttonyButton: makeNodeComponent("gluttonyButton"),
     qty3: makeNodeComponent("qty3"),
-    nftButton4: makeNodeComponent("nftButton4"),
+    greedButton: makeNodeComponent("greedButton"),
     qty4: makeNodeComponent("qty4"),
-    nftButton5: makeNodeComponent("nftButton5"),
+    angerButton: makeNodeComponent("angerButton"),
     qty5: makeNodeComponent("qty5"),
-    nftButton6: makeNodeComponent("nftButton6"),
+    heresyButton: makeNodeComponent("heresyButton"),
     qty6: makeNodeComponent("qty6"),
-    nftButton7: makeNodeComponent("nftButton7"),
+    violenceButton: makeNodeComponent("violenceButton"),
     qty7: makeNodeComponent("qty7"),
-    nftButton8: makeNodeComponent("nftButton8"),
+    fraudButton: makeNodeComponent("fraudButton"),
     qty8: makeNodeComponent("qty8"),
+    voidButton: makeNodeComponent("voidButton"),
+    throneButton: makeNodeComponent("throneButton"),
+    faqButton: makeNodeComponent("faqButton"),
+    teamButton: makeNodeComponent("teamButton"),
+    contactButton: makeNodeComponent("contactButton"),
 
     // Metadata about props expected for PlasmicMainMenu
     internalVariantProps: PlasmicMainMenu__VariantProps,

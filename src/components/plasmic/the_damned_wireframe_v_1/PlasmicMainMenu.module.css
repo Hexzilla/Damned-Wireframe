@@ -115,7 +115,7 @@
   width: 1em;
   height: 1em;
 }
-.button__uoM5:global(.__wab_instance) {
+.roadmapButton:global(.__wab_instance) {
   max-width: 100%;
   position: relative;
   width: 100%;
@@ -135,7 +135,7 @@
   width: 1em;
   height: 1em;
 }
-.button__nAEt:global(.__wab_instance) {
+.contestsButton:global(.__wab_instance) {
   max-width: 100%;
   position: relative;
   width: 100%;
@@ -144,13 +144,13 @@
   min-width: 0;
 }
 @media (max-width: 1000px) {
-  .button__nAEt:global(.__wab_instance) {
+  .contestsButton:global(.__wab_instance) {
     left: auto;
     top: auto;
   }
 }
 @media (min-width: 0px) and (max-width: 768px) {
-  .button__nAEt:global(.__wab_instance) {
+  .contestsButton:global(.__wab_instance) {
     left: auto;
     top: auto;
   }
@@ -167,7 +167,7 @@
   width: 1em;
   height: 1em;
 }
-.button__qLpTt:global(.__wab_instance) {
+.eventsButton:global(.__wab_instance) {
   max-width: 100%;
   position: relative;
   width: 100%;
@@ -187,7 +187,7 @@
   width: 1em;
   height: 1em;
 }
-.nftButton {
+.limboButton {
   display: flex;
   position: relative;
   flex-direction: row;
@@ -204,7 +204,7 @@
   padding: 0px;
 }
 @media (min-width: 0px) and (max-width: 768px) {
-  .nftButton {
+  .limboButton {
     display: none;
   }
 }
@@ -235,7 +235,7 @@
   text-align: right;
   flex-shrink: 0;
 }
-.nftButton2 {
+.lustButton {
   display: flex;
   position: relative;
   flex-direction: row;
@@ -252,7 +252,7 @@
   padding: 0px;
 }
 @media (min-width: 0px) and (max-width: 768px) {
-  .nftButton2 {
+  .lustButton {
     display: none;
   }
 }
@@ -287,7 +287,7 @@
   text-align: right;
   flex-shrink: 0;
 }
-.nftButton3 {
+.gluttonyButton {
   display: flex;
   position: relative;
   flex-direction: row;
@@ -305,7 +305,7 @@
   padding: 0px;
 }
 @media (min-width: 0px) and (max-width: 768px) {
-  .nftButton3 {
+  .gluttonyButton {
     display: none;
   }
 }
@@ -340,7 +340,7 @@
   text-align: right;
   flex-shrink: 0;
 }
-.nftButton4 {
+.greedButton {
   display: flex;
   position: relative;
   flex-direction: row;
@@ -357,7 +357,7 @@
   padding: 0px;
 }
 @media (min-width: 0px) and (max-width: 768px) {
-  .nftButton4 {
+  .greedButton {
     display: none;
   }
 }
@@ -392,7 +392,7 @@
   text-align: right;
   flex-shrink: 0;
 }
-.nftButton5 {
+.angerButton {
   display: flex;
   position: relative;
   flex-direction: row;
@@ -409,7 +409,7 @@
   padding: 0px;
 }
 @media (min-width: 0px) and (max-width: 768px) {
-  .nftButton5 {
+  .angerButton {
     display: none;
   }
 }
@@ -444,7 +444,7 @@
   text-align: right;
   flex-shrink: 0;
 }
-.nftButton6 {
+.heresyButton {
   display: flex;
   position: relative;
   flex-direction: row;
@@ -461,7 +461,7 @@
   padding: 0px;
 }
 @media (min-width: 0px) and (max-width: 768px) {
-  .nftButton6 {
+  .heresyButton {
     display: none;
   }
 }
@@ -496,7 +496,7 @@
   text-align: right;
   flex-shrink: 0;
 }
-.nftButton7 {
+.violenceButton {
   display: flex;
   position: relative;
   flex-direction: row;
@@ -513,7 +513,7 @@
   padding: 0px;
 }
 @media (min-width: 0px) and (max-width: 768px) {
-  .nftButton7 {
+  .violenceButton {
     display: none;
   }
 }
@@ -548,7 +548,7 @@
   text-align: right;
   flex-shrink: 0;
 }
-.nftButton8 {
+.fraudButton {
   display: flex;
   position: relative;
   flex-direction: row;
@@ -565,7 +565,7 @@
   padding: 0px;
 }
 @media (min-width: 0px) and (max-width: 768px) {
-  .nftButton8 {
+  .fraudButton {
     display: none;
   }
 }
@@ -600,7 +600,7 @@
   text-align: right;
   flex-shrink: 0;
 }
-.button__dgUUo:global(.__wab_instance) {
+.voidButton:global(.__wab_instance) {
   max-width: 100%;
   position: relative;
   width: 100%;
@@ -620,7 +620,7 @@
   width: 1em;
   height: 1em;
 }
-.button__vKwH:global(.__wab_instance) {
+.throneButton:global(.__wab_instance) {
   max-width: 100%;
   position: relative;
   width: 100%;
@@ -629,13 +629,13 @@
   min-width: 0;
 }
 @media (max-width: 1000px) {
-  .button__vKwH:global(.__wab_instance) {
+  .throneButton:global(.__wab_instance) {
     left: auto;
     top: auto;
   }
 }
 @media (min-width: 0px) and (max-width: 768px) {
-  .button__vKwH:global(.__wab_instance) {
+  .throneButton:global(.__wab_instance) {
     left: auto;
     top: auto;
   }
@@ -652,7 +652,7 @@
   width: 1em;
   height: 1em;
 }
-.button__aC2KH:global(.__wab_instance) {
+.faqButton:global(.__wab_instance) {
   max-width: 100%;
   position: relative;
   width: 100%;
@@ -672,7 +672,7 @@
   width: 1em;
   height: 1em;
 }
-.button__iGvvo:global(.__wab_instance) {
+.teamButton:global(.__wab_instance) {
   max-width: 100%;
   position: relative;
   width: 100%;
@@ -692,7 +692,7 @@
   width: 1em;
   height: 1em;
 }
-.button__g6Zp:global(.__wab_instance) {
+.contactButton:global(.__wab_instance) {
   max-width: 100%;
   position: relative;
   width: 100%;
