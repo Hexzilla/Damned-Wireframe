@@ -49,7 +49,7 @@ body {
 
 .section {
   position: absolute;
-  background: rgb(68, 68, 68);
+  background: white;
   height: 100vh;
   width: 100%;
   overflow: hidden;
