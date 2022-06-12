@@ -22,7 +22,7 @@ function Homepage_(props: HomepageProps, ref: HTMLElementRefOf<"div">) {
     const elements = document.getElementsByClassName("section");
     for (let i = 0; i < elements.length; i++) {
       const element = elements[i] as any;
-      element.style.zIndex = 100 - i;
+      element.style.zIndex = -1 - i;
     }
     return () => {
       window.removeEventListener("scroll", handleScrollEvent);
@@ -61,6 +61,7 @@ function Homepage_(props: HomepageProps, ref: HTMLElementRefOf<"div">) {
   return (
     <div className="container">
       <div className="scene">
+        <PlasmicHomepage root={{ ref }} {...props} />
         <div className="section">
           <img src="/images/nft/Damned.jpg" alt="Leaves Entrance" />
         </div>
