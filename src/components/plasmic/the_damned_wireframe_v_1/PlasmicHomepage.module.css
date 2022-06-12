@@ -200,7 +200,7 @@
   display: flex;
   text-align: center;
 }
-.text__mGgux {
+.text {
   width: 100%;
   height: auto;
   max-width: 800px;
@@ -364,7 +364,7 @@
   min-width: 0;
   padding: 32px;
 }
-.text__jdBfR {
+.storyText {
   position: relative;
   width: 100%;
   height: auto;
@@ -380,7 +380,7 @@
   min-width: 0;
 }
 @media (max-width: 1000px) {
-  .text__jdBfR {
+  .storyText {
     padding: 0px 16px 16px;
   }
 }

@@ -75,8 +75,10 @@ export type PlasmicHomepage__OverridesType = {
   testingFunctions?: p.Flex<"div">;
   svg?: p.Flex<"svg">;
   link?: p.Flex<"a">;
+  text?: p.Flex<"div">;
   mainContent?: p.Flex<"div">;
   storyPoem?: p.Flex<"div">;
+  storyText?: p.Flex<"div">;
 };
 
 export interface DefaultHomepageProps {
@@ -231,10 +233,12 @@ function PlasmicHomepage__RenderFunc(props: {
                       )}
                     >
                       <div
+                        data-plasmic-name={"text"}
+                        data-plasmic-override={overrides.text}
                         className={classNames(
                           projectcss.all,
                           projectcss.__wab_text,
-                          sty.text__mGgux
+                          sty.text
                         )}
                       >
                         {"Edit Profile"}
@@ -365,10 +369,12 @@ function PlasmicHomepage__RenderFunc(props: {
               </h1>
 
               <div
+                data-plasmic-name={"storyText"}
+                data-plasmic-override={overrides.storyText}
                 className={classNames(
                   projectcss.all,
                   projectcss.__wab_text,
-                  sty.text__jdBfR
+                  sty.storyText
                 )}
               >
                 {
@@ -431,8 +437,10 @@ const PlasmicDescendants = {
     "testingFunctions",
     "svg",
     "link",
+    "text",
     "mainContent",
-    "storyPoem"
+    "storyPoem",
+    "storyText"
   ],
   header: [
     "header",
@@ -442,17 +450,20 @@ const PlasmicDescendants = {
     "testing",
     "testingFunctions",
     "svg",
-    "link"
+    "link",
+    "text"
   ],
   mainMenu: ["mainMenu"],
   spacer: ["spacer"],
-  profile: ["profile", "testing", "testingFunctions", "svg", "link"],
+  profile: ["profile", "testing", "testingFunctions", "svg", "link", "text"],
   testing: ["testing", "testingFunctions"],
   testingFunctions: ["testingFunctions"],
   svg: ["svg"],
-  link: ["link"],
-  mainContent: ["mainContent", "storyPoem"],
-  storyPoem: ["storyPoem"]
+  link: ["link", "text"],
+  text: ["text"],
+  mainContent: ["mainContent", "storyPoem", "storyText"],
+  storyPoem: ["storyPoem", "storyText"],
+  storyText: ["storyText"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
@@ -467,8 +478,10 @@ type NodeDefaultElementType = {
   testingFunctions: "div";
   svg: "svg";
   link: "a";
+  text: "div";
   mainContent: "div";
   storyPoem: "div";
+  storyText: "div";
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -536,8 +549,10 @@ export const PlasmicHomepage = Object.assign(
     testingFunctions: makeNodeComponent("testingFunctions"),
     svg: makeNodeComponent("svg"),
     link: makeNodeComponent("link"),
+    text: makeNodeComponent("text"),
     mainContent: makeNodeComponent("mainContent"),
     storyPoem: makeNodeComponent("storyPoem"),
+    storyText: makeNodeComponent("storyText"),
 
     // Metadata about props expected for PlasmicHomepage
     internalVariantProps: PlasmicHomepage__VariantProps,
