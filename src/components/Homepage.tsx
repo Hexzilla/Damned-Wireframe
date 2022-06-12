@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import {
   PlasmicHomepage,
   DefaultHomepageProps,
@@ -50,7 +50,7 @@ function Homepage_(props: HomepageProps, ref: HTMLElementRefOf<"div">) {
       }
 
       const element = elements[index] as any;
-      const scale = (position > 0.1) ? Math.min(1 + position - 0.1, 1.75) : 1;
+      const scale = (position > 0.1) ? Math.min(1 + position - 0.1, 1.85) : 1;
       element.style.transform = `scale(${scale}) translate3d(0, 0, 0)`;
 
       const opacity = (position >= 0.5) ? ((1 - position) / 0.5) : 1;
@@ -63,40 +63,40 @@ function Homepage_(props: HomepageProps, ref: HTMLElementRefOf<"div">) {
       <div className="scene">
         <PlasmicHomepage root={{ ref }} {...props} />
         <div className="section">
-          <img src="/images/nft/Damned.jpg" alt="Leaves Entrance" />
+          <img src="/images/branding/forest.png" alt="Leaves Entrance" />
         </div>
         <div className="section">
-          <img src="/images/nft/Lore.jpg" alt="Lore" />
+          <img src="/images/branding/forest.png" alt="Lore" />
         </div>
         <div className="section">
-          <img src="/images/nft/Roadmap.jpg" alt="Roadmap" />
+          <img src="/images/branding/forest.png" alt="Roadmap" />
         </div>
         <div className="section">
-          <img src="/images/nft/Limbo.jpg" alt="Limbo" />
+          <img src="/images/branding/forest.png" alt="Limbo" />
         </div>
         <div className="section">
-          <img src="/images/nft/Lust.jpg" alt="Lust" />
+          <img src="/images/branding/forest.png" alt="Lust" />
         </div>
         <div className="section">
-          <img src="/images/nft/Gluttony.jpg" alt="Gluttony" />
+          <img src="/images/branding/forest.png" alt="Gluttony" />
         </div>
         <div className="section">
-          <img src="/images/nft/Greed.jpg" alt="Greed" />
+          <img src="/images/branding/forest.png" alt="Greed" />
         </div>
         <div className="section">
-          <img src="/images/nft/Anger.jpg" alt="Anger" />
+          <img src="/images/branding/forest.png" alt="Anger" />
         </div>
         <div className="section">
-          <img src="/images/nft/Heresy.jpg" alt="Heresy" />
+          <img src="/images/branding/forest.png" alt="Heresy" />
         </div>
         <div className="section">
-          <img src="/images/nft/Violence.jpg" alt="Violence" />
+          <img src="/images/branding/forest.png" alt="Violence" />
         </div>
         <div className="section">
-          <img src="/images/nft/Fraud.jpg" alt="Fraud" />
+          <img src="/images/branding/forest.png" alt="Fraud" />
         </div>
         <div className="section">
-          <img src="/images/nft/Team.jpg" alt="Team" />
+          <img src="/images/branding/forest.png" alt="Team" />
         </div>
       </div>
     </div>
