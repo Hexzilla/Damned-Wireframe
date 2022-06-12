@@ -55,6 +55,7 @@ export const PlasmicMainMenu__ArgProps = new Array<ArgPropType>();
 
 export type PlasmicMainMenu__OverridesType = {
   root?: p.Flex<"div">;
+  logoButton?: p.Flex<typeof Button>;
   loreButton?: p.Flex<typeof Button>;
   roadmapButton?: p.Flex<typeof Button>;
   contestsButton?: p.Flex<typeof Button>;
@@ -121,7 +122,9 @@ function PlasmicMainMenu__RenderFunc(props: {
       )}
     >
       <Button
-        className={classNames("__wab_instance", sty.button__csJ3)}
+        data-plasmic-name={"logoButton"}
+        data-plasmic-override={overrides.logoButton}
+        className={classNames("__wab_instance", sty.logoButton)}
         size={"compact" as const}
       >
         {"Logo"}
@@ -539,6 +542,7 @@ function PlasmicMainMenu__RenderFunc(props: {
 const PlasmicDescendants = {
   root: [
     "root",
+    "logoButton",
     "loreButton",
     "roadmapButton",
     "contestsButton",
@@ -565,6 +569,7 @@ const PlasmicDescendants = {
     "teamButton",
     "contactButton"
   ],
+  logoButton: ["logoButton"],
   loreButton: ["loreButton"],
   roadmapButton: ["roadmapButton"],
   contestsButton: ["contestsButton"],
@@ -596,6 +601,7 @@ type DescendantsType<T extends NodeNameType> =
   typeof PlasmicDescendants[T][number];
 type NodeDefaultElementType = {
   root: "div";
+  logoButton: typeof Button;
   loreButton: typeof Button;
   roadmapButton: typeof Button;
   contestsButton: typeof Button;
@@ -680,6 +686,7 @@ export const PlasmicMainMenu = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
+    logoButton: makeNodeComponent("logoButton"),
     loreButton: makeNodeComponent("loreButton"),
     roadmapButton: makeNodeComponent("roadmapButton"),
     contestsButton: makeNodeComponent("contestsButton"),

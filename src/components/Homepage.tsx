@@ -1,15 +1,31 @@
 import React, { useState, useEffect } from "react";
+import { useDispatch } from "react-redux";
 import {
   PlasmicHomepage,
   DefaultHomepageProps,
 } from "./plasmic/the_damned_wireframe_v_1/PlasmicHomepage";
-import { HTMLElementRefOf } from "@plasmicapp/react-web";
 import "./Homepage.css";
 import useWindowSize from "../hooks/useWindowSize";
+import { HTMLElementRefOf } from "@plasmicapp/react-web";
+import { setActiveMenubutton } from "../redux/action";
 
 export interface HomepageProps extends DefaultHomepageProps {}
 
+const buttonNames = [
+  'logo',
+  'lore',
+  'roadmap',
+  'contests',
+  'events',
+  'void',
+  'throne',
+  'faq',
+  'team',
+  'contact',
+]
+
 function Homepage_(props: HomepageProps, ref: HTMLElementRefOf<"div">) {
+  const dispatch = useDispatch();
   const [scroll, setScroll] = useState<number>(0);
   const { height } = useWindowSize();
 
@@ -56,7 +72,12 @@ function Homepage_(props: HomepageProps, ref: HTMLElementRefOf<"div">) {
       const opacity = (position >= 0.5) ? ((1 - position) / 0.5) : 1;
       element.style.opacity = `${opacity}`;
     }
-  }, [scroll, height]);
+
+    if (index >= 0 && index < buttonNames.length) {
+      const buttonName = buttonNames[index];
+      dispatch(setActiveMenubutton(buttonName));
+    }
+  }, [scroll, height, dispatch]);
 
   return (
     <div className="container">

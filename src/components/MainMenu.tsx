@@ -1,4 +1,5 @@
 import * as React from "react";
+import { useSelector } from "react-redux";
 import {
   PlasmicMainMenu,
   DefaultMainMenuProps,
@@ -8,7 +9,9 @@ import { HTMLElementRefOf } from "@plasmicapp/react-web";
 export interface MainMenuProps extends DefaultMainMenuProps {}
 
 function MainMenu_(props: MainMenuProps, ref: HTMLElementRefOf<"div">) {
-  const scrollTo = (sectionId: string) => {
+  const active = useSelector((state: any) => state.menu.activeButton);
+  
+  /*const scrollTo = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
       window.scrollTo({
@@ -16,23 +19,31 @@ function MainMenu_(props: MainMenuProps, ref: HTMLElementRefOf<"div">) {
         behavior: "smooth",
       });
     }
+  }*/
+
+  const getStyles = (name: string): any => {
+    if (active === name) {
+      return {
+        color: 'blue'
+      };
+    }
+    return {};
   }
 
   return (
     <PlasmicMainMenu
       root={{ ref }}
       {...props}
-      loreButton={{ onClick: () => scrollTo("Lore") }}
-      roadmapButton={{ onClick: () => scrollTo("Roadmap") }}
-      limboButton={{ onClick: () => scrollTo("Limbo") }}
-      lustButton={{ onClick: () => scrollTo("Lust") }}
-      gluttonyButton={{ onClick: () => scrollTo("Gluttony") }}
-      greedButton={{ onClick: () => scrollTo("Greed") }}
-      angerButton={{ onClick: () => scrollTo("Anger") }}
-      heresyButton={{ onClick: () => scrollTo("Heresy") }}
-      violenceButton={{ onClick: () => scrollTo("Violence") }}
-      fraudButton={{ onClick: () => scrollTo("Fraud") }}
-      teamButton={{ onClick: () => scrollTo("Team") }}
+      logoButton={getStyles('logo')}
+      loreButton={getStyles('lore')}
+      roadmapButton={getStyles('roadmap')}
+      contestsButton={getStyles('contests')}
+      eventsButton={getStyles('events')}
+      voidButton={getStyles('void')}
+      throneButton={getStyles('throne')}
+      faqButton={getStyles('faq')}
+      teamButton={getStyles('team')}
+      contactButton={getStyles('contact')}
     />
   );
 }
