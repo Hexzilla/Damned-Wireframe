@@ -46,7 +46,7 @@ function Homepage_(props: HomepageProps, ref: HTMLElementRefOf<"div">) {
   }, []);
 
   useEffect(() => {
-    const h = height;
+    const h = height * 4;
 
     const elements = document.getElementsByClassName("section");
     const index = Math.floor(scroll / h);
