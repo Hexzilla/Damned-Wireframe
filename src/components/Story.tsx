@@ -1,4 +1,4 @@
-import React, { useCallback, useRef, useState } from "react";
+import React, { useCallback, useMemo, useRef, useState } from "react";
 import {
   PlasmicStory,
   DefaultStoryProps,
@@ -144,17 +144,44 @@ const Heresy = () => (
 const Violence = () => (
   <FadeInSection>
     <p>
-      Among those darkest of soul await a torture chamber of VIOLENCE, in
-      which the Damned are put to task for their sins. Goya~esque nightmares
-      surround a dungeon of monstrous mignons and misfortune, such as a head
-      cage filled with hungry rats. Escape this torture and receive a poem for
-      your troubles.
+      Among those darkest of soul await a torture chamber of VIOLENCE, in which
+      the Damned are put to task for their sins. Goya~esque nightmares surround
+      a dungeon of monstrous mignons and misfortune, such as a head cage filled
+      with hungry rats. Escape this torture and receive a poem for your
+      troubles.
     </p>
   </FadeInSection>
 );
 
 function Story_(props: StoryProps, ref: HTMLElementRefOf<"div">) {
   const active = useSelector((state: any) => state.menu.activeButton);
+
+  const title = useMemo(() => {
+    switch (active) {
+      case "logo":
+        return 'Damned';
+      case "lore":
+        return 'Lore';
+      case "roadmap":
+        return 'Limbo';
+      case "contests":
+        return 'Lust';
+      case "events":
+        return 'Gluttony';
+      case "void":
+        return 'Greed';
+      case "throne":
+        return 'Anger';
+      case "faq":
+        return 'Heresy';
+      case "team":
+        return 'Violence';
+      case "contact":
+        return 'Anger';
+      default:
+        return '';
+    }
+  }, [active])
 
   const getStoryText = useCallback(() => {
     const getStory = () => {
@@ -186,7 +213,14 @@ function Story_(props: StoryProps, ref: HTMLElementRefOf<"div">) {
     return <div className="fade-in-text">{getStory()}</div>;
   }, [active]);
 
-  return <PlasmicStory root={{ ref }} {...props} storyText={getStoryText()} />;
+  return (
+    <PlasmicStory
+      root={{ ref }}
+      {...props}
+      title={title}
+      storyText={getStoryText()}
+    />
+  );
 }
 
 const Story = React.forwardRef(Story_);

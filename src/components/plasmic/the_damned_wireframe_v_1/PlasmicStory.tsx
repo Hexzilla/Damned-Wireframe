@@ -59,6 +59,8 @@ export const PlasmicStory__ArgProps = new Array<ArgPropType>("children");
 
 export type PlasmicStory__OverridesType = {
   root?: p.Flex<"div">;
+  h1?: p.Flex<"h1">;
+  title?: p.Flex<"h1">;
   storyText?: p.Flex<"div">;
   img?: p.Flex<typeof p.PlasmicImg>;
 };
@@ -101,22 +103,26 @@ function PlasmicStory__RenderFunc(props: {
       )}
     >
       <h1
+        data-plasmic-name={"h1"}
+        data-plasmic-override={overrides.h1}
         className={classNames(
           projectcss.all,
           projectcss.h1,
           projectcss.__wab_text,
-          sty.h1__hmkkr
+          sty.h1
         )}
       >
         {"Story"}
       </h1>
 
       <h1
+        data-plasmic-name={"title"}
+        data-plasmic-override={overrides.title}
         className={classNames(
           projectcss.all,
           projectcss.h1,
           projectcss.__wab_text,
-          sty.h1__yPcpv
+          sty.title
         )}
       >
         {"Limbo"}
@@ -131,7 +137,7 @@ function PlasmicStory__RenderFunc(props: {
           {(hasVariant(globalVariants, "screen", "smallScreen") ? true : true)
             ? p.renderPlasmicSlot({
                 defaultContents:
-                  "Lost souls wander through the castle of LIMBO, through the cold cobble stones that built up this fortress of woe and desolation, infinite abyss. We must find our escape through corridors of endless woe. But I never lost hope that one day I could be freed from this eternal damnation of apathy and that we would find an escape to enlightenment. Riddles lead us to a secret door, which opens out onto a beautiful blossoming garden.",
+                  "Lost souls wander through the castle of LIMBO, through the cold cobble stones that built up this fortress of woe and desolation, infinite abyss.",
                 value: args.children,
                 className: classNames(sty.slotTargetChildren)
               })
@@ -139,46 +145,50 @@ function PlasmicStory__RenderFunc(props: {
         </div>
       ) : null}
 
-      <p.PlasmicImg
-        data-plasmic-name={"img"}
-        data-plasmic-override={overrides.img}
-        alt={""}
-        className={classNames(sty.img)}
-        displayHeight={"auto" as const}
-        displayMaxHeight={"none" as const}
-        displayMaxWidth={"100%" as const}
-        displayMinHeight={"0" as const}
-        displayMinWidth={"0" as const}
-        displayWidth={"auto" as const}
-        loading={"lazy" as const}
-        src={{
-          src: audiopng2Zz4X42Fn,
-          fullWidth: 534,
-          fullHeight: 108,
-          aspectRatio: undefined
-        }}
-      />
+      <div className={classNames(projectcss.all, sty.freeBox__ksodm)}>
+        <p.PlasmicImg
+          data-plasmic-name={"img"}
+          data-plasmic-override={overrides.img}
+          alt={""}
+          className={classNames(sty.img)}
+          displayHeight={"auto" as const}
+          displayMaxHeight={"none" as const}
+          displayMaxWidth={"100%" as const}
+          displayMinHeight={"0" as const}
+          displayMinWidth={"0" as const}
+          displayWidth={"auto" as const}
+          loading={"lazy" as const}
+          src={{
+            src: audiopng2Zz4X42Fn,
+            fullWidth: 534,
+            fullHeight: 108,
+            aspectRatio: undefined
+          }}
+        />
 
-      <div className={classNames(projectcss.all, sty.freeBox__esoJs)}>
-        <Button
-          className={classNames("__wab_instance", sty.button__q6Ovn)}
-          isDisabled={true}
-        >
-          {"Story"}
-        </Button>
+        <div className={classNames(projectcss.all, sty.freeBox__esoJs)}>
+          <Button
+            className={classNames("__wab_instance", sty.button__q6Ovn)}
+            isDisabled={true}
+          >
+            {"Story"}
+          </Button>
 
-        <div className={classNames(projectcss.all, sty.freeBox__gBqqw)} />
+          <div className={classNames(projectcss.all, sty.freeBox__gBqqw)} />
 
-        <Button className={classNames("__wab_instance", sty.button__kNmEa)}>
-          {"Poem"}
-        </Button>
+          <Button className={classNames("__wab_instance", sty.button__kNmEa)}>
+            {"Poem"}
+          </Button>
+        </div>
       </div>
     </div>
   ) as React.ReactElement | null;
 }
 
 const PlasmicDescendants = {
-  root: ["root", "storyText", "img"],
+  root: ["root", "h1", "title", "storyText", "img"],
+  h1: ["h1"],
+  title: ["title"],
   storyText: ["storyText"],
   img: ["img"]
 } as const;
@@ -187,6 +197,8 @@ type DescendantsType<T extends NodeNameType> =
   typeof PlasmicDescendants[T][number];
 type NodeDefaultElementType = {
   root: "div";
+  h1: "h1";
+  title: "h1";
   storyText: "div";
   img: typeof p.PlasmicImg;
 };
@@ -248,6 +260,8 @@ export const PlasmicStory = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
+    h1: makeNodeComponent("h1"),
+    title: makeNodeComponent("title"),
     storyText: makeNodeComponent("storyText"),
     img: makeNodeComponent("img"),
 
