@@ -34,6 +34,7 @@ import {
 import MainMenu from "../../MainMenu"; // plasmic-import: 5OPwbvd_XQK/component
 import Button from "../../Button"; // plasmic-import: 9U02DESJlfv/component
 import { Reveal } from "@plasmicpkgs/react-awesome-reveal"; // plasmic-import: R6s1FdhksG/codeComponent
+import Story from "../../Story"; // plasmic-import: mYuKdlljvqg/component
 
 import { useScreenVariants as useScreenVariantssKPzWh1XRaeiy } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: sKPzWh1XRaeiy/globalVariant
 
@@ -46,7 +47,6 @@ import ChecksvgIcon from "./icons/PlasmicIcon__Checksvg"; // plasmic-import: 9va
 import IconIcon from "./icons/PlasmicIcon__Icon"; // plasmic-import: gfMcd0a2-6W/icon
 import ProfileSvgrepoComsvgIcon from "./icons/PlasmicIcon__ProfileSvgrepoComsvg"; // plasmic-import: odUkh9DYHA/icon
 import imageNjSfrrcy2 from "./images/image.png"; // plasmic-import: njSfrrcy2/picture
-import audiopng2Zz4X42Fn from "./images/audiopng2.png"; // plasmic-import: zz4X42Fn_/picture
 
 export type PlasmicHomepage__VariantMembers = {
   synced: "synced";
@@ -73,12 +73,14 @@ export type PlasmicHomepage__OverridesType = {
   profile?: p.Flex<"div">;
   testing?: p.Flex<"div">;
   testingFunctions?: p.Flex<"div">;
+  button?: p.Flex<typeof Button>;
+  syncButton?: p.Flex<typeof Button>;
   svg?: p.Flex<"svg">;
   link?: p.Flex<"a">;
   text?: p.Flex<"div">;
   mainContent?: p.Flex<"div">;
-  storyPoem?: p.Flex<"div">;
-  storyText?: p.Flex<"div">;
+  h1?: p.Flex<"h1">;
+  story?: p.Flex<typeof Story>;
 };
 
 export interface DefaultHomepageProps {
@@ -174,10 +176,9 @@ function PlasmicHomepage__RenderFunc(props: {
                     </div>
 
                     <Button
-                      className={classNames(
-                        "__wab_instance",
-                        sty.button__hnVyc
-                      )}
+                      data-plasmic-name={"button"}
+                      data-plasmic-override={overrides.button}
+                      className={classNames("__wab_instance", sty.button)}
                       size={"compact" as const}
                     >
                       {"Mint Random"}
@@ -193,11 +194,13 @@ function PlasmicHomepage__RenderFunc(props: {
                         : true
                     ) ? (
                       <Button
+                        data-plasmic-name={"syncButton"}
+                        data-plasmic-override={overrides.syncButton}
                         className={classNames(
                           "__wab_instance",
-                          sty.button__o0CYd,
+                          sty.syncButton,
                           {
-                            [sty.buttonsynced__o0CYdOtsOf]: hasVariant(
+                            [sty.syncButtonsynced]: hasVariant(
                               variants,
                               "synced",
                               "synced"
@@ -212,7 +215,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       >
                         {hasVariant(variants, "synced", "synced")
                           ? "Unsync"
-                          : "Unsync"}
+                          : "Sync"}
                       </Button>
                     ) : null}
 
@@ -324,101 +327,24 @@ function PlasmicHomepage__RenderFunc(props: {
             })}
           >
             <h1
+              data-plasmic-name={"h1"}
+              data-plasmic-override={overrides.h1}
               className={classNames(
                 projectcss.all,
                 projectcss.h1,
                 projectcss.__wab_text,
-                sty.h1__nbjLf,
-                {
-                  [sty.h1synced__nbjLfOtsOf]: hasVariant(
-                    variants,
-                    "synced",
-                    "synced"
-                  )
-                }
+                sty.h1,
+                { [sty.h1synced]: hasVariant(variants, "synced", "synced") }
               )}
             >
               {"Main Content"}
             </h1>
 
-            <div
-              data-plasmic-name={"storyPoem"}
-              data-plasmic-override={overrides.storyPoem}
-              className={classNames(projectcss.all, sty.storyPoem)}
-            >
-              <h1
-                className={classNames(
-                  projectcss.all,
-                  projectcss.h1,
-                  projectcss.__wab_text,
-                  sty.h1__qpyG
-                )}
-              >
-                {"Story"}
-              </h1>
-
-              <h1
-                className={classNames(
-                  projectcss.all,
-                  projectcss.h1,
-                  projectcss.__wab_text,
-                  sty.h1__ySjDx
-                )}
-              >
-                {"Limbo"}
-              </h1>
-
-              <div
-                data-plasmic-name={"storyText"}
-                data-plasmic-override={overrides.storyText}
-                className={classNames(
-                  projectcss.all,
-                  projectcss.__wab_text,
-                  sty.storyText
-                )}
-              >
-                {
-                  "Lost souls wander through the castle of LIMBO, through the cold cobble stones that built up this fortress of woe and desolation, infinite abyss. We must find our escape through corridors of endless woe. But I never lost hope that one day I could be freed from this eternal damnation of apathy and that we would find an escape to enlightenment. Riddles lead us to a secret door, which opens out onto a beautiful blossoming garden."
-                }
-              </div>
-
-              <p.PlasmicImg
-                alt={""}
-                className={classNames(sty.img__qu30I)}
-                displayHeight={"auto" as const}
-                displayMaxHeight={"none" as const}
-                displayMaxWidth={"100%" as const}
-                displayMinHeight={"0" as const}
-                displayMinWidth={"0" as const}
-                displayWidth={"auto" as const}
-                loading={"lazy" as const}
-                src={{
-                  src: audiopng2Zz4X42Fn,
-                  fullWidth: 534,
-                  fullHeight: 108,
-                  aspectRatio: undefined
-                }}
-              />
-
-              <div className={classNames(projectcss.all, sty.freeBox__gloM)}>
-                <Button
-                  className={classNames("__wab_instance", sty.button__lzfbK)}
-                  isDisabled={true}
-                >
-                  {"Story"}
-                </Button>
-
-                <div
-                  className={classNames(projectcss.all, sty.freeBox__xDn1)}
-                />
-
-                <Button
-                  className={classNames("__wab_instance", sty.button__frBz6)}
-                >
-                  {"Poem"}
-                </Button>
-              </div>
-            </div>
+            <Story
+              data-plasmic-name={"story"}
+              data-plasmic-override={overrides.story}
+              className={classNames("__wab_instance", sty.story)}
+            />
           </div>
         </p.Stack>
       </div>
@@ -435,12 +361,14 @@ const PlasmicDescendants = {
     "profile",
     "testing",
     "testingFunctions",
+    "button",
+    "syncButton",
     "svg",
     "link",
     "text",
     "mainContent",
-    "storyPoem",
-    "storyText"
+    "h1",
+    "story"
   ],
   header: [
     "header",
@@ -449,21 +377,34 @@ const PlasmicDescendants = {
     "profile",
     "testing",
     "testingFunctions",
+    "button",
+    "syncButton",
     "svg",
     "link",
     "text"
   ],
   mainMenu: ["mainMenu"],
   spacer: ["spacer"],
-  profile: ["profile", "testing", "testingFunctions", "svg", "link", "text"],
-  testing: ["testing", "testingFunctions"],
+  profile: [
+    "profile",
+    "testing",
+    "testingFunctions",
+    "button",
+    "syncButton",
+    "svg",
+    "link",
+    "text"
+  ],
+  testing: ["testing", "testingFunctions", "button"],
   testingFunctions: ["testingFunctions"],
+  button: ["button"],
+  syncButton: ["syncButton"],
   svg: ["svg"],
   link: ["link", "text"],
   text: ["text"],
-  mainContent: ["mainContent", "storyPoem", "storyText"],
-  storyPoem: ["storyPoem", "storyText"],
-  storyText: ["storyText"]
+  mainContent: ["mainContent", "h1", "story"],
+  h1: ["h1"],
+  story: ["story"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
@@ -476,12 +417,14 @@ type NodeDefaultElementType = {
   profile: "div";
   testing: "div";
   testingFunctions: "div";
+  button: typeof Button;
+  syncButton: typeof Button;
   svg: "svg";
   link: "a";
   text: "div";
   mainContent: "div";
-  storyPoem: "div";
-  storyText: "div";
+  h1: "h1";
+  story: typeof Story;
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -547,12 +490,14 @@ export const PlasmicHomepage = Object.assign(
     profile: makeNodeComponent("profile"),
     testing: makeNodeComponent("testing"),
     testingFunctions: makeNodeComponent("testingFunctions"),
+    button: makeNodeComponent("button"),
+    syncButton: makeNodeComponent("syncButton"),
     svg: makeNodeComponent("svg"),
     link: makeNodeComponent("link"),
     text: makeNodeComponent("text"),
     mainContent: makeNodeComponent("mainContent"),
-    storyPoem: makeNodeComponent("storyPoem"),
-    storyText: makeNodeComponent("storyText"),
+    h1: makeNodeComponent("h1"),
+    story: makeNodeComponent("story"),
 
     // Metadata about props expected for PlasmicHomepage
     internalVariantProps: PlasmicHomepage__VariantProps,

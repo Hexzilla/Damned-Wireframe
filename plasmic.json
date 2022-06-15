@@ -126,6 +126,19 @@
           "cssFilePath": "plasmic/the_damned_wireframe_v_1/PlasmicMainMenu.module.css",
           "scheme": "blackbox",
           "componentType": "component"
+        },
+        {
+          "id": "mYuKdlljvqg",
+          "name": "Story",
+          "type": "managed",
+          "projectId": "4Z3UMkZpk9iU1tNC7ianWh",
+          "renderModuleFilePath": "plasmic/the_damned_wireframe_v_1/PlasmicStory.tsx",
+          "importSpec": {
+            "modulePath": "Story.tsx"
+          },
+          "cssFilePath": "plasmic/the_damned_wireframe_v_1/PlasmicStory.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
         }
       ],
       "icons": [
@@ -219,6 +232,6 @@
     ]
   },
   "wrapPagesWithGlobalContexts": true,
-  "cliVersion": "0.1.181",
-  "$schema": "https://unpkg.com/@plasmicapp/cli@0.1.181/dist/plasmic.schema.json"
+  "cliVersion": "0.1.182",
+  "$schema": "https://unpkg.com/@plasmicapp/cli@0.1.182/dist/plasmic.schema.json"
 }
